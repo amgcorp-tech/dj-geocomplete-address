@@ -1,0 +1,96 @@
+{% extends 'base_app.html' %}
+{% load i18n widget_tweaks static django_tables2 %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-row">
+    <div class="flex-row-fluid ml-lg-12">
+
+        <div class="row">
+            {% if table_left %}
+            <div class="col-lg-4">
+                {% block table_left %}{% endblock %}
+            </div>
+            {% endif %}
+
+            <div class="{% if table_left and table_right %}col-lg-4{% elif table_left or table_right %}col-lg-8{% else %}col-lg-12{% endif %}">
+                <div class="card card-custom card-sticky mb-5" id="kt_page_sticky_card">
+
+                    <div class="card-header">
+                        <div class="card-title">
+                            {% block table_title %}
+                                {% include "metronic/backend/tables2/pagination.html" %}
+                            {% endblock %}
+                        </div>
+                        <div class="card-toolbar">
+                            <div class="dropdown me-0">
+                                <form class="actions-form" action="" method="POST">{% csrf_token %}</form>
+                                <a href="#" class="btn btn-sm btn-bg-light btn-active-color-primary" id="actions_dropdown" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+                                    {% trans "Quick Actions" %}
+                                </a>
+                                <!--begin::Menu 3-->
+                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true" style="">
+                                    <!--begin::Heading-->
+                                    <div class="menu-item px-3">
+                                        <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">{% trans "Select an Option" %}</div>
+                                    </div>
+                                    <!--end::Heading-->
+                                    {% block table_actions %}
+                                    <!--begin::Menu item-->
+                                    <div class="menu-item px-3">
+                                        <a href="#" class="menu-link px-3">Create Invoice</a>
+                                    </div>
+                                    <!--end::Menu item-->
+                                    {% endblock %}
+                                </div>
+                                <!--end::Menu 3-->
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                {% block table_content %}
+                                <div class="my-5">
+                                    {% if object_list.count > 0 or table.paginator.count > 0 %}
+                                        {% render_table table %}
+                                    {% else %}
+                                        <h3 class="d-flex flex-center text-center text-muted min-h-200px">
+                                            {% if empty_table %}
+                                                {{ empty_table|safe }}
+                                            {% else %}
+                                                {% blocktrans %} No {{ title }} found.{% endblocktrans %}
+                                            {% endif %}
+                                        </h3>
+                                    {% endif %}
+                                </div>
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        {% block table_footer %}
+                            {% include "metronic/backend/tables2/pagination.html" %}
+                        {% endblock %}
+                        <div class="d-flex align-items-center justify-content-center">
+                            <small class="text-muted mt-10">{% trans "Displaying" %} {{ table.page.start_index }}-{{ table.page.end_index }} {% trans "of" %} {{ table.page.paginator.count }} {% trans "records" %}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if table_right %}
+            <div class="col-lg-4">
+                {% block table_right %}{% endblock %}
+            </div>
+            {% endif %}
+
+            {% block extra_content %}{% endblock %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

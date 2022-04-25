@@ -1,0 +1,75 @@
+{% extends "metronic/backend/base.html"  %}
+{% load i18n django_tables2 %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="toolbar" id="kt_toolbar">
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+
+            <div data-kt-place="true" data-kt-place-mode="prepend" data-kt-place-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">{#  lh-1 #}
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">{% block breadcrumbs_title %}{{ title }}{% endblock %}</h1>
+
+                <span class="h-20px border-gray-200 border-start mx-4"></span> {# h-20px border-gray-200 border-start ms-3 mx-2 #}
+
+                {% block breadcrumbs_actions_left %}
+                    {% comment %}{% if table %}
+                        <div class="d-flex align-items-center flex-shrink-0">
+                            <!--begin::Label-->
+                            <span class="fs-7 text-gray-700 fw-bolder pe-3">{% trans "Export" %}:</span>
+                            <!--end::Label-->
+                            <!--begin::Actions-->
+                            <div class="d-flex flex-shrink-0">
+                                <!--begin::Button-->
+                                <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="" data-bs-original-title="{% trans "Csv file" %}">
+                                    <a href="{% export_url "csv" %}" class="btn btn-sm btn-icon btn-active-color-success">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
+                                        <i class="fas fa-file-csv fs-2x"></i>
+                                        <!--end::Svg Icon-->
+                                    </a>
+                                </div>
+                                <!--end::Button-->
+                                <!--begin::Button-->
+                                <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="" data-bs-original-title="{% trans "Excel file" %}">
+                                    <a href="{% export_url "xlsx" %}" class="btn btn-sm btn-icon btn-active-color-success">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen006.svg-->
+                                        <i class="fas fa-file-excel fs-2x"></i>
+                                        <!--end::Svg Icon-->
+                                    </a>
+                                </div>
+                                <!--end::Button-->
+                                <!--begin::Button-->
+                                <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="" data-bs-original-title="{% trans "Json file" %}">
+                                    <a href="{% export_url "json" %}" class="btn btn-sm btn-icon btn-active-color-success">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen023.svg-->
+                                        <i class="fas fa-file-code fs-2x"></i>
+                                        <!--end::Svg Icon-->
+                                    </a>
+                                </div>
+                                <!--end::Button-->
+                            </div>
+                            <!--end::Actions-->
+                        </div>
+                    {% endif %}{% endcomment %}
+                {% endblock %}
+            </div>
+
+            <div class="d-flex align-items-center py-1">
+                <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-sm btn-flex btn-light btn-active-primary fw-bolder me-4">
+                    <i class="fa fa-arrow-circle-left icon-sm"></i>{% trans "Back" %}
+                </a>
+
+                {% if filter %}
+                    {% include "filters.html" %}
+                {% endif %}
+                {% block breadcrumbs_actions %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+

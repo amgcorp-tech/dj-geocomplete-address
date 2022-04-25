@@ -1,0 +1,8 @@
+{% load static %}
+{% get_media_prefix as MEDIA_URL %}
+
+{% if config.FAVICON_IMAGE %}
+<link rel="shortcut icon" href="{{ config.FAVICON_IMAGE }}" />
+{% else %}
+<link rel="shortcut icon" href="{% static "metronic/assets/images/logos/base/Imagotype_1.svg" %}" />
+{% endif %}

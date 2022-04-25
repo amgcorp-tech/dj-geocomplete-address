@@ -1,0 +1,160 @@
+{% load i18n static widget_tweaks sekizai_tags %}
+
+{% if field %}
+
+    <div class="fv-row mb-10">
+        <label class="{% if field.field.required %}required{% endif %} form-label">
+            {% if custom_label %}{{ custom_label }}{% else %}{{ field.label }}{% endif %}
+            {% if field.help_text %}
+                <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="" data-bs-original-title="{{field.help_text|safe}}" aria-label="{{field.help_text|safe}}"></i>
+            {% endif %}
+        </label>
+
+            {% if field|field_type == 'charfield' and not field|widget_type == 'passwordinput' %}
+                {% render_field field class+="form-control form-control-solid" placeholder=field.label %}
+
+            {% elif field|field_type == 'cardnumberfield' %}
+                <div class="position-relative">
+                    <!--begin::Input-->
+                    {% render_field field class+="form-control form-control-solid" placeholder=field.label %}
+                    <!--end::Input-->
+                    <!--begin::Card logos-->
+                    <div class="position-absolute translate-middle-y top-50 end-0 me-5">
+                        <img src="{% static "metronic/assets/images/card-logos/visa.svg" %}" alt="" class="h-25px">
+                        <img src="{% static "metronic/assets/images/card-logos/mastercard.svg" %}" alt="" class="h-25px">
+                        <img src="{% static "metronic/assets/images/card-logos/american-express.svg" %}" alt="" class="h-25px">
+                    </div>
+                    <!--end::Card logos-->
+                </div>
+
+            {% elif field|field_type == 'cardexpiryfield' %}
+                {% render_field field class+="form-control form-control-solid" placeholder=field.label %}
+            {% elif field|field_type == 'securitycodefield' %}
+                <div class="position-relative">
+                    <!--begin::Input-->
+                    {% render_field field class+="form-control form-control-solid" placeholder=field.label %}
+                    <!--end::Input-->
+                    <!--begin::CVV icon-->
+                    <div class="position-absolute translate-middle-y top-50 end-0 me-3">
+                        <!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg-->
+                        <span class="svg-icon svg-icon-2hx">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 7H2V11H22V7Z" fill="black"></path>
+                                <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="black"></path>
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::CVV icon-->
+                </div>
+
+            {% elif field|field_type == 'charfield' and field|widget_type == 'passwordinput' %}
+                    <div class="mb-10 fv-row" data-kt-password-meter="true">
+                        <!--begin::Wrapper-->
+                        <div class="mb-1">
+                            <!--begin::Input wrapper-->
+                            <div class="position-relative mb-3">
+                                {% render_field field class+="form-control form-control-solid" placeholder=field.label autocomplete="off" %}
+                                <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+                                    <i class="bi bi-eye-slash fs-2"></i>
+                                    <i class="bi bi-eye fs-2 d-none"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!--end::Wrapper-->
+                        {% if field.errors %}
+                            <div class="text-danger mt-5">{{ field.errors }}</div>
+                        {% endif %}
+                        <!--begin::Meter-->
+                        <div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+                            <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                            <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                            <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                            <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+                        </div>
+                        <!--end::Meter-->
+                    </div>
+
+            {% elif field|field_type == 'lazytypedchoicefield' and field|widget_type == 'countryselectwidget' %}
+
+                {% render_field field class="form-select form-select-solid rounded-start-0 border-start" data-control="select2" %}
+
+
+            {% elif field|field_type == 'typedchoicefield' and field|widget_type == 'select2widget' %}
+
+                {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label %}
+
+
+            {% elif field|field_type == 'timezoneformfield' and field|widget_type == 'select2widget' %}
+                {% if field.field.required %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label data-allow-clear="true" %}
+                {% else %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label %}
+                {% endif %}
+
+            {% elif field|field_type == 'modelchoicefield' and field|widget_type == 'select2widget' %}
+                {% if field.field.required %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label data-allow-clear="true" %}
+                {% else %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label %}
+                {% endif %}
+
+            {% elif field|field_type == 'modelchoicefield' and field|widget_type == 'modelselect2widget' %}
+                {% if field.field.required %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label data-allow-clear="true" %}
+                {% else %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label %}
+                {% endif %}
+
+            {% elif field|field_type == 'choicefield' and field|widget_type == 'select2widget' %}
+                {% if field.field.required %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label data-allow-clear="true" %}
+                {% else %}
+                    {% render_field field class+="form-control form-control-lg form-control-solid" data-placeholder=field.label %}
+                {% endif %}
+
+            {% elif field|field_type == 'choicefield' and field|widget_type == 'select' %}
+                {% if field.field.required %}
+                    {% render_field field class+="form-control form-control-lg form-select form-select-solid" data-control="select2" data-placeholder=field.label data-allow-clear="true" %}
+                {% else %}
+                    {% render_field field class+="form-control form-control-lg form-select form-select-solid" data-control="select2" data-placeholder=field.label %}
+                {% endif %}
+
+            {% elif field|field_type == 'modelmultiplechoicefield' and field|widget_type == 'selectmultiple' %}
+                {% render_field field class+="form-control form-control-lg form-select form-select-solid" data-control="select2" data-placeholder=field.label data-allow-clear="true" multiple="multiple" %}
+
+            {% elif field|field_type == 'datefield' and field|widget_type == 'dateinput' %}
+                <div class="mb-1">
+                    <!--begin::Input wrapper-->
+                    <div class="position-relative mb-3">
+                        {% render_field field class+="form-control form-control-lg form-control-solid kt_datepicker_1" placeholder=field.label %}
+                        <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+                            <i class="bi bi-calendar2-check fs-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+            {% elif field|field_type == 'booleanfield' and field|widget_type == 'checkboxinput' %}
+                <div class="mb-1">
+                    <div class="position-relative mb-3">
+                        <div class="form-check form-switch form-check-custom form-check-solid">
+                            {% render_field field class+="form-check-input" %}
+                        </div>
+                    </div>
+                </div>
+
+            {% else %}
+
+            {% render_field field class+="form-control form-control-solid" placeholder=field.label %}
+
+            {% endif %}
+
+        {% comment %}{% if field.errors %}
+            {% for error in field.errors %}
+                <div class="fv-plugins-message-container invalid-feedback"><div data-field="target_title" data-validator="notEmpty">{{error|escape}}</div></div>
+            {% endfor %}
+        {% endif %}{% endcomment %}
+
+    </div>
+
+{% endif %}

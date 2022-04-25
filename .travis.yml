@@ -1,0 +1,28 @@
+language: python
+
+python:
+    - "3.8"
+    - "3.9"
+
+env:
+    - DJANGO=django==3.2.*
+    - DJANGO=django==4.0.*
+
+install:
+    - pip install -r test_requirements.txt --use-mirrors
+    - pip install $DJANGO
+    - pip install coveralls
+
+script:
+    - cd addresses/tests
+    - ./runtests.py
+    - mv .coverage ../../
+    - cd ../../
+
+matrix:
+    exclude:
+        - python: "3.8"
+          env: DJANGO=django==3.2.*
+
+after_success:
+    - coveralls

@@ -1,0 +1,21 @@
+{% extends "metronic/account/base.html" %}
+{% load  i18n %}
+{% block title %}{% trans "Account Inactive" %}{% endblock %}
+
+
+{% block content %}
+    <p></p>
+    <div class="pt-lg-10">
+        <!--begin::Logo-->
+        <h1 class="fw-bolder fs-2qx text-dark mb-7">{% trans "Account Inactive" %}</h1>
+        <!--end::Logo-->
+        <!--begin::Message-->
+        <div class="fw-bold fs-3 text-gray-400 mb-15">{% trans "For security reasons your account has been deactivated, if you believe that it is an error, please contact our administration team" %}</div>
+        <!--end::Message-->
+        <!--begin::Action-->
+        <div class="text-center">
+            <a href="/" class="btn btn-lg btn-primary fw-bolder">{% trans "Go to homepage" %}</a>
+        </div>
+        <!--end::Action-->
+    </div>
+{% endblock %}

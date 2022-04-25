@@ -1,0 +1,10 @@
+{% load i18n static %}
+{% get_media_prefix as MEDIA_URL %}
+
+<a href="/" class="d-lg-none">
+    {% if config.MOBILE_LOGO_IMAGE %}
+        <img alt="{% trans 'Logo' %}" src="{{ config.MOBILE_LOGO_IMAGE }}" class="h-40px" />
+    {% else %}
+        <img alt="{% trans 'Logo' %}" src="{% static "metronic/assets/images/logos/base/Imagotype_1.svg" %}" class="h-40px" />
+    {% endif %}
+</a>

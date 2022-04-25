@@ -1,0 +1,37 @@
+{% load i18n sekizai_tags %}
+
+
+<table class="table table-responsive" draggable="true">
+    {{ formset.management_form }}
+    {% for form in formset.forms %}
+        {% comment %}{% if forloop.first %}
+            <thead>
+                <tr class="fs-3">
+                    {% for field in form.visible_fields %}
+                        <th>{{ field.label|capfirst }}
+                            {% if not hide_help and field.help_text %}
+                                <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" data-bs-toggle="tooltip" title="" data-bs-original-title="{{field.help_text|safe}}" aria-label="{{field.help_text|safe}}"></i>
+                            {% endif %}
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+        {% endif %}{% endcomment %}
+
+        <tr class="{{ formset.prefix }}">
+            <td class="rounded border p-10 mb-10">
+                <div class="location">
+                    {% for field in form.visible_fields %}
+                        {% include 'metronic/backend/form_snippets/formset_input_fields.html' with field=field %}
+                    {% endfor %}
+                    <fieldset class="details">
+                        {% for hidden in form.hidden_fields %}
+                            {{ hidden }}
+                        {% endfor %}
+                    </fieldset>
+                </div>
+            </td>
+        </tr>
+
+    {% endfor %}
+</table>

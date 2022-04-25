@@ -1,0 +1,74 @@
+{% load static compress %}
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+{% compress css file mandatory_css %}
+
+<link href="{% static 'metronic/assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'metronic/assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'metronic/assets/plugins/global/intl-tel-input/15.0.1/css/intlTelInput.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'metronic/assets/css/django_select2.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'metronic/assets/css/tables.css' %}" rel="stylesheet">
+<link href="{% static 'metronic/assets/plugins/global/dual-listbox/dist/dual-listbox.css' %}" rel="stylesheet">
+<link href="{% static 'metronic/assets/css/dual_listbox.css' %}" rel="stylesheet">
+
+<style>
+    .intl-tel-input {
+        width: 100%;
+        {#padding-left: 70px;#}
+    }
+
+    .iti__flag {background-image: url("{% static 'metronic/assets/plugins/global/intl-tel-input/15.0.1/img/flags.png' %}");}
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .iti__flag {background-image: url("{% static 'metronic/assets/plugins/global/intl-tel-input/15.0.1/img/flags@2x.png' %}");}
+    }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 192dpi) {
+      .iti__flag {background-image: url("{% static 'metronic/assets/plugins/global/intl-tel-input/15.0.1/img/flags@3x.png' %}");}
+    }
+
+    body.swal2-shown > [aria-hidden="true"] {
+      filter: blur(10px);
+    }
+
+    body > * {
+      transition: 0.1s filter linear;
+    }
+
+    @media only screen and (max-width: 575px) {
+        .mobile-hidden {
+            display: none !important;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .w-lg-600px {
+            width: 600px !important;
+        }
+    }
+
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 26px;
+        position: absolute;
+        top: 7px;
+        right: 5px;
+        width: 50px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: #444;
+        line-height: inherit;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        display: block;
+        padding-left: 0;
+        padding-right: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+</style>
+
+{% endcompress %}

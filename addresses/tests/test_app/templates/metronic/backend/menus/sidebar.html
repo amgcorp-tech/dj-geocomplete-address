@@ -1,0 +1,113 @@
+{% load i18n %}
+
+<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
+
+    <div class="menu-item">
+        <div class="menu-content pt-8 pb-2">
+            <span class="menu-section text-muted text-uppercase fs-8 ls-1">{% trans "Sidebar Menu" %}</span>
+        </div>
+    </div>
+
+    {# START INCLUDE APP MENU ITEMS HERE #}
+
+        {% comment %}{% include "addresses/menus/sidebar_left.html" %}{% endcomment %}
+
+    {# END INCLUDE APP MENU ITEMS HERE #}
+
+</div>
+
+{# Start Examples sidebar items #}
+
+ {% comment %}<div class="menu-item">
+        <div class="menu-content">
+            <div class="separator mx-1 my-4"></div>
+        </div>
+    </div>
+    <div class="menu-item">
+        <a class="menu-link" href="documentation/getting-started.html">
+            <span class="menu-icon">
+                <!--begin::Svg Icon | path: icons/duotone/Home/Library.svg-->
+                <span class="svg-icon svg-icon-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000" />
+                            <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)" x="16.3255682" y="2.94551858" width="3" height="18" rx="1" />
+                        </g>
+                    </svg>
+                </span>
+                <!--end::Svg Icon-->
+            </span>
+            <span class="menu-title">Documentation</span>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a class="menu-link" href="documentation/getting-started/changelog.html">
+            <span class="menu-icon">
+                <!--begin::Svg Icon | path: icons/duotone/Files/File.svg-->
+                <span class="svg-icon svg-icon-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24" />
+                            <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                            <rect fill="#000000" x="6" y="11" width="9" height="2" rx="1" />
+                            <rect fill="#000000" x="6" y="15" width="5" height="2" rx="1" />
+                        </g>
+                    </svg>
+                </span>
+                <!--end::Svg Icon-->
+            </span>
+            <span class="menu-title">Changelog</span>
+        </a>
+    </div>{% endcomment %}
+
+{% comment %}<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
+
+    <div class="menu-item">
+        <div class="menu-content pt-8 pb-2">
+            <span class="menu-section text-muted text-uppercase fs-8 ls-1">Crafted</span>
+        </div>
+    </div>
+    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+        <span class="menu-link">
+            <span class="menu-icon">
+                <span class="svg-icon svg-icon-2">
+                    <i class="fa fa-home"></i>
+                </span>
+            </span>
+            <span class="menu-title">Modals</span>
+            <span class="menu-arrow"></span>
+        </span>
+        <div class="menu-sub menu-sub-accordion menu-active-bg">
+            <div class="menu-item">
+                <a class="menu-link" href="../../demo1/dist/widgets/lists.html">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                    <span class="menu-title">Lists</span>
+                </a>
+            </div>
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                <span class="menu-link">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                    <span class="menu-title">Search</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                    <div class="menu-item">
+                        <a class="menu-link" href="../../demo1/dist/modals/search/users.html">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Users</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>{% endcomment %}
+
+{# End Examples sidebar items #}

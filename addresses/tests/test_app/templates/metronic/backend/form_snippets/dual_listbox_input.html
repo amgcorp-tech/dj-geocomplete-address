@@ -1,0 +1,9 @@
+{% load i18n static widget_tweaks %}
+
+{% render_field field class+="kt-dual-listbox" data-available-title=available_text data-selected-title=selected_text %}
+{% if field.errors %}
+    <div class="error invalid-feedback">
+        {{ field.errors }}
+    </div>
+{% endif %}
+<span class="form-text text-muted">{{field.help_text}}</span>

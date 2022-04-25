@@ -1,0 +1,159 @@
+{% extends "metronic/account/base.html" %}
+{% load i18n static widget_tweaks account sekizai_tags %}
+
+{% block title %}{% trans 'Email Verification Sent' %}{% endblock %}
+
+{% block content %}
+
+<form class="form w-100 mb-10" novalidate="novalidate" id="kt_sing_in_two_steps_form" method="POST" action="{% url 'phone_confirmation' user.uid %}">{% csrf_token %}
+    <div class="text-center mb-10">
+        <!--begin::Title-->
+        <h1 class="text-dark fw-bolder mb-3 fs-1">{% trans "Two Step Verification" %}</h1>
+        <!--end::Title-->
+    </div>
+    <div class="fw-bold fs-5 mb-5">
+        <div class="notice d-flex bg-light-success rounded border-success border border-dashed rounded-3 p-6">
+            <div class="d-flex flex-stack flex-grow-1">
+                <div class="fw-bold">
+                    <h4 class="text-gray-800 fw-bolder">{% trans 'Email Verification Sent' %}</h4>
+                    <div class="fs-6 text-gray-600">
+                        {% blocktrans with email=user.show_email %}
+                            Follow the link sent to email: <strong>{{ email }}</strong> and finalize the signup process or verify your account using the registered phone number and confirmation code sent.
+                        {% endblocktrans %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--begin::Heading-->
+    <div class="text-center mb-10">
+        <!--begin::Sub-title-->
+        <div class="text-muted fw-bold fs-5 mb-5">
+            {% trans "Enter the verification code we sent to" %}
+        </div>
+        <!--end::Sub-title-->
+        <!--begin::Mobile no-->
+        <div class="fw-bolder text-dark fs-3">
+            {{ user.show_phone }}
+        </div>
+        <!--end::Mobile no-->
+    </div>
+    <!--end::Heading-->
+    <!--begin::Section-->
+    <div class="mb-10 px-md-10">
+        <!--begin::Label-->
+        <div class="fw-bolder text-start text-dark fs-6 mb-1 ms-1">{% trans "Type your 6 digit security code" %}</div>
+        <!--end::Label-->
+        <!--begin::Input group-->
+        <div class="d-flex flex-wrap flex-stack">
+            <div class="flex justify-center " id="OTPInput">
+            </div>
+            <input hidden id="otp" name="otp" value="">
+            <!--input name="otp" type="text" data-inputmask="'mask': '999999', 'placeholder': ''" maxlength="6" class="form-control form-control-solid h-60px w-225px fs-2qx text-center border-primary border-hover mx-1 my-2 partitioned" required="required" />
+            <input name="c2" type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" required="required" />
+            <input name="c3" type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" required="required" />
+            <input name="c4" type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" required="required" />
+            <input name="c5" type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" required="required" />
+            <input name="c6" type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" required="required" /-->
+        </div>
+        <!--begin::Input group-->
+    </div>
+    <!--end::Section-->
+    <!--begin::Submit-->
+    <div class="d-flex flex-center">
+        <button type="submit" id="otpSubmit" class="btn btn-lg btn-primary fw-bolder">
+            <span class="indicator-label">{% trans "Submit" %}</span>
+            <span class="indicator-progress">{% trans "Please wait..." %}
+            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+        </button>
+    </div>
+    <!--end::Submit-->
+</form>
+<!--end::Form-->
+<!--begin::Notice-->
+{% comment %}<div class="text-center fw-bold fs-5">
+    <span class="text-muted me-1">{% trans "Didn’t get the code ?" %}</span>
+    <a href="#" class="link-primary fw-bolder fs-5 me-1">{% trans "Resend" %}</a>
+    <span class="text-muted me-1">or</span>
+    <a href="#" class="link-primary fw-bolder fs-5">{% trans "Call Us" %}</a>
+</div>{% endcomment %}
+<!--end::Notice-->
+
+    {% addtoblock "page_css" %}
+        <link href="//unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    {% endaddtoblock %}
+
+    {% addtoblock "page_js" %}
+        <script>
+            /* This creates all the OTP input fields dynamically. Change the otp_length variable  to change the OTP Length */
+        const $otp_length = 6;
+
+        const element = document.getElementById('OTPInput');
+        for (let i = 0; i < $otp_length; i++) {
+          let inputField = document.createElement('input'); // Creates a new input element
+          inputField.className = "form-control form-control-solid h-60px w-60px fs-2qx bg-gray-100 border-gray-100 outline-none focus:bg-gray-200 m-2 text-center rounded focus:border-blue-400 focus:shadow-outline";
+          {#inputField.className = "form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2 outline-none focus:bg-gray-200 text-center rounded focus:border-blue-400 focus:shadow-outline";#}
+          // Do individual OTP input styling here;
+          inputField.style.cssText = "text-shadow: 0 0 0 gray;"; // Input field text styling. This css hides the text caret
+          inputField.id = 'otp-field' + i; // Don't remove
+          inputField.maxLength = 1; // Sets individual field length to 1 char
+          element.appendChild(inputField); // Adds the input field to the parent div (OTPInput)
+        }
+
+        /*  This is for switching back and forth the input box for user experience */
+        const inputs = document.querySelectorAll('#OTPInput > *[id]');
+        for (let i = 0; i < inputs.length; i++) {
+          inputs[0].focus();
+          inputs[i].addEventListener('keydown', function(event) {
+            if (event.key === "Backspace") {
+
+              if (inputs[i].value == '') {
+                if (i != 0) {
+                  inputs[i - 1].focus();
+                }
+              } else {
+                inputs[i].value = '';
+              }
+
+            } else if (event.key === "ArrowLeft" && i !== 0) {
+              inputs[i - 1].focus();
+            } else if (event.key === "ArrowRight" && i !== inputs.length - 1) {
+              inputs[i + 1].focus();
+            } else if (event.key != "ArrowLeft" && event.key != "ArrowRight") {
+              inputs[i].setAttribute("type", "text");
+              inputs[i].value = ''; // Bug Fix: allow user to change a random otp digit after pressing it
+              setTimeout(function() {
+                inputs[i].setAttribute("type", "password");
+              }, 1000); // Hides the text after 1 sec
+            }
+          });
+          inputs[i].addEventListener('input', function() {
+            inputs[i].value = inputs[i].value.toUpperCase(); // Converts to Upper case. Remove .toUpperCase() if conversion isnt required.
+            if (i === inputs.length - 1 && inputs[i].value !== '') {
+              return true;
+            } else if (inputs[i].value !== '') {
+              inputs[i + 1].focus();
+            }
+          });
+
+        }
+        /*  This is to get the value on pressing the submit button
+          *   In this example, I used a hidden input box to store the otp after compiling data from each input fields
+          *   This hidden input will have a name attribute and all other single character fields won't have a name attribute
+          *   This is to ensure that only this hidden input field will be submitted when you submit the form */
+
+        document.getElementById('otpSubmit').addEventListener("click", function() {
+          const inputs = document.querySelectorAll('#OTPInput > *[id]');
+          let compiledOtp = '';
+          for (let i = 0; i < inputs.length; i++) {
+            compiledOtp += inputs[i].value;
+          }
+          document.getElementById('otp').value = compiledOtp;
+          return true;
+        });
+            </script>
+    {% endaddtoblock %}
+
+{% endblock %}

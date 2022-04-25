@@ -1,0 +1,21 @@
+{% load i18n sekizai_tags compress %}
+
+{% addtoblock "page_js" %}
+{% compress js file show_global_messages %}
+    <script>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "bg-success border-success"  %}
+                toastr.success("{{ message|safe }}", "{% trans 'Notice Message!' %}");
+            {% elif message.tags == "bg-danger border-danger" %}
+                toastr.error("{{ message|safe }}", "{% trans 'Notice Message!' %}");
+            {% elif message.tags == "bg-warning border-warning" %}
+                toastr.warning("{{ message|safe }}", "{% trans 'Notice Message!' %}");
+            {% elif message.tags == "bg-info border-info" %}
+                toastr.info("{{ message|safe }}", "{% trans 'Notice Message!' %}");
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </script>
+{% endcompress %}
+{% endaddtoblock %}

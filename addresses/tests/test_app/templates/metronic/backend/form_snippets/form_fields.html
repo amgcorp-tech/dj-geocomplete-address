@@ -1,0 +1,5 @@
+{% load i18n static widget_tweaks %}
+
+{% for field in form %}
+    {% include "metronic/backend/form_snippets/input_fields.html" with field=field %}
+{% endfor %}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load i18n static tz meta compress sekizai_tags %}
+{% get_current_language as LANGUAGE_CODE %}
+<!--[if IE 8]> <html lang="{{ LANGUAGE_CODE }}" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="{{ LANGUAGE_CODE }}" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="{{ LANGUAGE_CODE }}">
+	<head {% meta_namespaces %}>
+		<meta charset="utf-8" />
+		<title>{{ config.SITE_NAME }} | {% block title %}{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="{% block meta_description %}{{ config.SITE_META_DESCRIPTION }}{% endblock %}" />
+		<meta name="keywords" content="{% block meta_keywords %}{{ config.SITE_META_KEYWORDS }}{% endblock %}"/>
+		<meta name="author" content="Locomotion Technologies Corp."/>
+        {% include "meta/meta.html" %}
+        {% include "metronic/brand/favicon.html" %}
+
+        {% include "metronic/assets/mandatory_css.html" %}
+		{% render_block "page_css" %}
+
+	</head>
+	<body id="kt_body" class="bg-body">
+		<!--begin::Main-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Authentication - Sign-in -->
+			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
+				<!--begin::Aside-->
+                {% block login_aside %}{# d-flex flex-column flex-lg-row-auto w-xl-600px bgi-no-repeat bgi-position-x-center bgi-size-contain position-xl-relative min-h-100px min-h-lg-350px #}
+				<div class="d-flex flex-column flex-lg-row-auto w-xl-600px positon-xl-relative" style="background-color: #ab0944;"> {# #349fa4 #1e8696 #}
+					<!--begin::Wrapper-->
+					<div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px scroll-y">
+						<!--begin::Content-->
+						<div class="d-flex flex-row-fluid flex-column flex-row-fluid flex-center text-center p-10 pt-lg-20 pt-10">
+							<!--begin::Logo-->
+							{% include "metronic/brand/auth_logo.html" %}
+							<!--end::Logo-->
+
+						</div>
+						<!--end::Content-->
+						<!--begin::Illustration-->
+                       {% comment %} <div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px"
+                             style="background-image: url({% static 'metronic/assets/images/illustrations/c-03.png' %})">
+                        </div>{% endcomment %}
+						<!--end::Illustration-->
+
+                        <div class="d-flex flex-center flex-wrap fs-6 p-5 pb-0 mobile-hidden d-sm-none d-lg-block">
+
+                            <div class="d-flex flex-center fw-bold fs-6">
+                                <div class="text-white-50">
+                                    <span class="text-white-50 fw-bold me-1">{{ request.current_year }} © {{ config.COPYRIGHT_TEXT }}</span><br/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-center flex-wrap fs-6 p-5 pb-0 mobile-hidden d-sm-none d-lg-block">
+
+                            <div class="d-flex flex-center fw-bold fs-6">
+                                <div class="text-white-50">
+                                    {% trans "Powered By" %} <a href="https://corp.locomotiontechnologies.com" target="_blank" class="text-white-50 text-hover-primary">Locomotion Technologies Corp.</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+					<div class="d-flex flex-center flex-wrap fs-6 p-5 pb-10 mobile-hidden d-sm-none d-lg-flex">
+						<!--begin::Links-->
+						{% include "metronic/account/footer.html" %}
+						<!--end::Links-->
+					</div>
+
+					</div>
+					<!--end::Wrapper-->
+				</div>
+                {% endblock %}
+				<!--end::Aside-->
+				<!--begin::Body-->
+				<div class="d-flex flex-column flex-lg-row-fluid py-10">
+                    {% block container %}
+					<!--begin::Content-->
+					<div class="d-flex flex-center flex-column flex-column-fluid">
+
+						<!--begin::Wrapper-->
+                            {% block global_messages %}
+                                {% include "metronic/notices/messages.html" %}
+                            {% endblock %}
+                            {% block form_errors %}
+                                {% include "metronic/notices/form_errors.html" %}
+                            {% endblock %}
+						<div class="w-lg-500px p-10 p-lg-15 mx-auto">
+							<!--begin::Form-->
+							{% block content %}{% endblock %}
+							<!--end::Form-->
+						</div>
+						<!--end::Wrapper-->
+
+					</div>
+					<!--end::Content-->
+                    {% endblock %}
+					<!--begin::Footer-->
+
+					<!--end::Footer-->
+				</div>
+				<!--end::Body-->
+			</div>
+			<!--end::Authentication - Sign-in-->
+		</div>
+
+        {% include "metronic/assets/mandatory_js.html" %}
+        {% render_block "page_js" %}
+
+	</body>
+</html>

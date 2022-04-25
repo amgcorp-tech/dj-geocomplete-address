@@ -1,0 +1,157 @@
+{% extends "metronic/account/base.html" %}
+{% load i18n static widget_tweaks sekizai_tags %}
+
+{% block title %}{% trans 'Create an Account' %}{% endblock %}
+
+{% block content %}
+<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" method="post" action="{% url 'account_signup' %}">{% csrf_token %}
+    <!--begin::Heading-->
+    <div class="mb-10 text-center">
+        <!--begin::Title-->
+        <h1 class="text-dark mb-3">{% trans "Create an Account" %}</h1>
+        <!--end::Title-->
+        <!--begin::Link-->
+        <div class="text-gray-400 fw-bold fs-4">{% trans "Already have an account?" %}
+        <a href="{% url 'two_factor_login' %}{% if redirect_field_value %}?{{ redirect_field_name }}={{ redirect_field_value }}{% endif %}" class="link-primary fw-bolder">{% trans "Sign in here" %}</a></div>
+        <!--end::Link-->
+    </div>
+    <!--end::Heading-->
+    <!--begin::Separator-->
+    <div class="d-flex align-items-center mb-10">
+        <div class="border-bottom border-gray-300 mw-50 w-100"></div>
+        <span class="fw-bold text-gray-400 fs-7 mx-2">{% trans "OR" %}</span>
+        <div class="border-bottom border-gray-300 mw-50 w-100"></div>
+    </div>
+    <!--end::Separator-->
+    <!--begin::Input group-->
+    <div class="row fv-row mb-7">
+        <!--begin::Col-->
+        <div class="col-xl-6">
+            <label class="required form-label fw-bolder text-dark fs-6">{% trans "First Name" %}</label>
+            {% render_field form.first_name class="form-control form-control-lg form-control-solid" autocomplete="off" %}
+            {% if form.first_name.errors %}
+                <div class="text-danger mt-5">{{ form.first_name.errors }}</div>
+            {% endif %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-6">
+            <label class="required form-label fw-bolder text-dark fs-6">{% trans "Last Name" %}</label>
+            {% render_field form.last_name class="form-control form-control-lg form-control-solid" autocomplete="off" %}
+            {% if form.last_name.errors %}
+                <div class="text-danger mt-5">{{ form.last_name.errors }}</div>
+            {% endif %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
+    <div class="mb-7 fv-row">
+        <!--begin::Wrapper-->
+        <div class="mb-1">
+            <!--begin::Label-->
+            <label class="required form-label fw-bolder text-dark fs-6">{% trans "Date of Birth" %}</label>
+            <!--end::Label-->
+            <!--begin::Input wrapper-->
+            <div class="position-relative mb-3">
+                {% render_field form.dob class="form-control form-control-lg form-control-solid" autocomplete="off" %}
+            </div>
+            <!--end::Input wrapper-->
+        </div>
+        <!--end::Wrapper-->
+        <!--begin::Hint-->
+        <div class="text-muted">
+            {% if form.dob.help_text %}
+                {{ form.dob.help_text|safe }}
+            {% endif %}
+            {% trans "To register the data of your date of birth use the American format: MM/DD/YYYY"|safe %}
+        </div>
+        {% if form.dob.errors %}
+            <div class="text-danger mt-5">{{ form.dob.errors }}</div>
+        {% endif %}
+        <!--end::Hint-->
+    </div>
+    <!--end::Input group=-->
+    <!--begin::Input group-->
+    <div class="fv-row mb-7">
+        <label class="required form-label fw-bolder text-dark fs-6">{% trans "Phone Number" %}</label>
+        {% render_field form.phone_number class+="form-control form-control-lg form-control-solid" autocomplete="off" %}
+        {% if form.phone_number.errors %}
+            <div class="text-danger mt-5">{{ form.phone_number.errors }}</div>
+        {% endif %}
+    </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
+    <div class="fv-row mb-7">
+        <label class="required form-label fw-bolder text-dark fs-6">{% trans "Email" %}</label>
+        {% render_field form.email class="form-control form-control-lg form-control-solid" autocomplete="off" %}
+        {% if form.email.errors %}
+            <div class="text-danger mt-5">{{ form.email.errors }}</div>
+        {% endif %}
+    </div>
+    <!--end::Input group-->
+    <div class="mb-10 fv-row" data-kt-password-meter="true">
+        <!--begin::Wrapper-->
+        <div class="mb-1">
+            <!--begin::Label-->
+            <label class="required form-label fw-bolder text-dark fs-6">{% trans "Password" %}</label>
+            <!--end::Label-->
+            <!--begin::Input wrapper-->
+            <div class="position-relative mb-3">
+                {% render_field form.password1 class="form-control form-control-lg form-control-solid" autocomplete="off" %}
+                <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+                    <i class="bi bi-eye-slash fs-2"></i>
+                    <i class="bi bi-eye fs-2 d-none"></i>
+                </span>
+            </div>
+            <!--end::Input wrapper-->
+            <!--begin::Meter-->
+            <div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+                <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+            </div>
+            <!--end::Meter-->
+        </div>
+        <!--end::Wrapper-->
+        <!--begin::Hint-->
+        <div class="text-muted">
+            {% if form.password1.help_text %}
+                {{ form.password1.help_text|safe }}
+            {% endif %}
+            {% trans "Use 6 or more characters with a mix of letters, numbers &amp; symbols."|safe %}
+        </div>
+        {% if form.password1.errors %}
+            <div class="text-danger mt-5">{{ form.password1.errors }}</div>
+        {% endif %}
+        <!--end::Hint-->
+    </div>
+    <!--end::Input group-->
+    <div class="fv-row mb-10">
+        {% render_field form.captcha %}
+    </div>
+    {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+    {% endif %}
+
+    <!--begin::Actions-->
+    <div class="text-center">
+        <button type="submit" id="kt_sign_up_submit" class="btn btn-lg btn-primary">
+            <span class="indicator-label">{% trans "Submit" %}</span>
+            <span class="indicator-progress">{% trans "Please wait..." %}
+            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+        </button>
+    </div>
+    <!--end::Actions-->
+</form>
+
+    {% addtoblock "page_css" %}
+        {{ form.media.css }}
+    {% endaddtoblock %}
+
+    {% addtoblock "page_js" %}
+        {{ form.media.js }}
+    {% endaddtoblock %}
+
+{% endblock %}

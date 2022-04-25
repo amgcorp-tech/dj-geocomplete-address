@@ -1,0 +1,51 @@
+{% load i18n %}
+
+{% comment %}<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>{% endcomment %}
+
+<ul class="pagination">
+    {% if page_obj.has_previous %}
+        {% if page_attr %}
+            <li class="page-item previous"><a href="?{{page_attr}}=1" class="page-link">{% trans "First" %}</a></li>
+            <li class="page-item previous"><a href="?{{page_attr}}={{ page_obj.previous_page_number }}" class="page-link">{% trans "Prev" %}</a></li>
+            <li class="page-item previous"><a href="?{{page_attr}}={{ page_obj.previous_page_number }}" class="page-link">{{ page_obj.previous_page_number }}</a></li>
+        {% else %}
+            <li class="page-item previous"><a href="?page=1" class="page-link">{% trans "First" %}</a></li>
+            <li class="page-item previous"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">{% trans "Prev" %}</a></li>
+            <li class="page-item previous"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">{{ page_obj.previous_page_number }}</a></li>
+          {% endif %}
+    {% endif %}
+
+    {% if page_attr %}
+        <li class="page-item active"><a href="?{{page_attr}}={{ page_obj.number }}" class="page-link">{{ page_obj.number }}</a></li>
+    {% else %}
+        <li class="page-item active"><a href="?page={{ page_obj.number }}" class="page-link">{{ page_obj.number }}</a></li>
+    {% endif %}
+
+    {% if page_obj.has_next %}
+      {% if page_attr %}
+          <li class="page-item next"><a href="?{{page_attr}}={{ page_obj.next_page_number }}" class="page-link">{{ page_obj.next_page_number }}</a></li>
+          <li class="page-item next"><a href="?{{page_attr}}={{ page_obj.next_page_number }}" class="page-link">{% trans "Next" %}</a></li>
+          <li class="page-item next"><a href="?{{page_attr}}={{ page_obj.paginator.num_pages }}" class="page-link">{% trans "Last" %}</a></li>
+      {% else %}
+          <li class="page-item next"><a href="?page={{ page_obj.next_page_number }}" class="page-link">{{ page_obj.next_page_number }}</a></li>
+          <li class="page-item next"><a href="?page={{ page_obj.next_page_number }}" class="page-link">{% trans "Next" %}</a></li>
+          <li class="page-item next"><a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">{% trans "Last" %}</a></li>
+      {% endif %}
+    {% endif %}
+</ul>

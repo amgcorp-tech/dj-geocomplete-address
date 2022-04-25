@@ -1,0 +1,70 @@
+{% load i18n static compress %}
+
+<script src="{% static 'rest_framework/js/coreapi-0.1.1.js' %}"></script>
+<script src="{% url 'api-docs:schema-js' %}"></script>
+<script src="{% url 'javascript-catalog' %}"></script>
+<script src="{% static 'metronic/assets/plugins/global/plugins.bundle.js' %}"></script>
+<script src="{% static 'metronic/assets/js/scripts.bundle.js' %}"></script>
+
+<script type="application/javascript">
+    var coreapi = window.coreapi  // Loaded by `coreapi.js`
+    var schema = window.schema    // Loaded by `schema.js`
+
+    var auth = new coreapi.auth.SessionAuthentication({
+      csrfCookieName: "csrftoken",
+      csrfHeaderName: "X-CSRFToken"
+    });
+
+    // Initialize a client
+    var client = new window.coreapi.Client({ auth: auth });
+    window.client = client;
+    window.api_client = client
+
+</script>
+
+
+<script src="{% static 'metronic/assets/plugins/global/intl-tel-input/15.0.1/js/intlTelInput-jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/intl-tel-input/15.0.1/js/utils.js' %}" type="text/javascript"></script>
+<script src="{% static 'django_select2/django_select2.js'%}" type="text/javascript" ></script>
+<script src="{% static 'metronic/assets/plugins/global/csrf.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/action.delete.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/bulk_action.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/dual-listbox/dist/dual-listbox.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/dual-listbox.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/jquery.formset_upd.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/flatpicker.js' %}" type="text/javascript"></script>
+<script src="{% static 'metronic/assets/plugins/global/inputmask.js' %}" type="text/javascript"></script>
+
+
+<script>
+
+    var target = document.querySelector("#kt_body");
+    var msg = gettext("Loading");
+
+    //var blockUI = new KTBlockUI(target);
+    var blockUI = new KTBlockUI(target, {
+        overlayClass: "bg-dark bg-opacity-25",
+        message: '<div class="blockui-message"><span class="spinner-border text-primary"></span>'+ msg +'... </div>',
+    });
+
+</script>
+
+<script>
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": true,
+      "progressBar": true,
+      "positionClass": "toastr-bottom-right",
+      "preventDuplicates": false,
+      "showDuration": "500",
+      "hideDuration": "4000",
+      "timeOut": "10000",
+      "extendedTimeOut": "2000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    };
+
+</script>

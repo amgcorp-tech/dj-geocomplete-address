@@ -1,0 +1,83 @@
+{% extends "metronic/account/base.html" %}
+{% load i18n static widget_tweaks %}
+
+{% block title %}{% trans 'Login' %}{% endblock %}
+
+{% block content %}
+<form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate" id="kt_sign_in_form" method="post" action="{% url 'account_login' %}">{% csrf_token %}
+    <!--begin::Heading-->
+    <div class="text-center mb-10">
+        <!--begin::Title-->
+        <h1 class="text-dark mb-3">{% trans "Log In" %}</h1>
+        <!--end::Title-->
+        <!--begin::Link-->
+        {% if config.ALLOW_SIGNUP %}
+        <div class="text-gray-400 fw-bold fs-4">{% trans "New Here?" %}
+        <a href="{% url 'account_signup' %}{% if redirect_field_value %}?{{ redirect_field_name }}={{ redirect_field_value }}{% endif %}" class="link-primary fw-bolder">{% trans "Create an Account" %}</a></div>
+        {% endif %}
+        <!--end::Link-->
+    </div>
+    <!--begin::Heading-->
+    <!--begin::Input group-->
+    <div class="fv-row mb-10">
+        <!--begin::Label-->
+        <label class="required form-label fs-6 fw-bolder text-dark">
+            {{ form.login.label }}
+        </label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        {% render_field form.login class="form-control form-control-lg form-control-solid" autocomplete="off" %}
+        <!--end::Input-->
+        {% if form.login.errors %}
+            <div class="text-danger mt-5">{{ form.login.errors }}</div>
+        {% endif %}
+    </div>
+    <div class="mb-10 fv-row">
+        <!--begin::Wrapper-->
+        <div class="mb-1">
+            <!--begin::Label-->
+            <label class="required form-label fw-bolder text-dark fs-6">{% trans "Date of Birth" %}</label>
+            <!--end::Label-->
+            <!--begin::Input wrapper-->
+            <div class="position-relative mb-3">
+                {% render_field form.password class="form-control form-control-lg form-control-solid" autocomplete="off" placeholder="MM/DD/YYYY" %}
+            </div>
+        </div>
+        <!--end::Wrapper-->
+        {% if form.password.errors %}
+            <div class="text-danger mt-5">{{ form.password.errors }}</div>
+        {% endif %}
+        <!--begin::Hint-->
+        {% comment %}<div class="d-flex flex-stack mb-2 pull-right">
+            <!--begin::Link-->
+            <a href="{% url 'account_reset_password' %}" class="link-primary fs-6 fw-bolder">{% trans "Forgot Password ?" %}</a>
+            <!--end::Link-->
+        </div>{% endcomment %}
+        <!--end::Hint-->
+    </div>
+    <!--end::Input group-->
+    <!--begin::Actions-->
+    <div class="text-center">
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        {% endif %}
+        <!--begin::Submit button-->
+        <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
+            <span class="indicator-label">{% trans "Continue" %}</span>
+            <span class="indicator-progress">{% trans "Please wait..." %}
+            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+        </button>
+        <!--end::Submit button-->
+        {% comment %}<!--begin::Separator-->
+        <div class="text-center text-muted text-uppercase fw-bolder mb-5">{% trans "or" %}</div>
+        <!--end::Separator-->
+
+
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+        {% include "socialaccount/snippets/login_extra.html" %}{% endcomment %}
+
+    </div>
+    <!--end::Actions-->
+</form>
+
+{% endblock %}

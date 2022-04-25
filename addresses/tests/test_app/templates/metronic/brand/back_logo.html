@@ -1,0 +1,10 @@
+{% load i18n static %}
+{% get_media_prefix as MEDIA_URL %}
+
+<a href="/">
+    {% if config.HORIZONTAL_LOGO_IMAGE %}
+        <img alt="{% trans 'Logo' %}" src="{{ config.HORIZONTAL_LOGO_IMAGE }}" class="h-25px logo" />
+    {% else %}
+        <img alt="{% trans 'Logo' %}" src="{% static "metronic/assets/images/logos/base/Identity_white_horizontal.svg" %}" class="h-35px logo" />
+    {% endif %}
+</a>

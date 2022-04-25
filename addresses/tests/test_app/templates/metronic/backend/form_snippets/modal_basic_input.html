@@ -1,0 +1,27 @@
+{% load i18n static widget_tweaks %}
+{% if field %}
+    <div class="form-group row">
+        <label class="col-xl-3 col-lg-3 col-form-label">{{ field.label }} {% if field.field.required %} <span class="text-danger"> *</span> {% endif %}</label>
+        <div class="col-lg-12 col-xl-12">
+            {% if field|field_type == 'charfield' %}
+                {% render_field field class+="form-control form-control-solid maxlength" %}
+            {% else %}
+                {% render_field field class+="form-control form-control-solid" %}
+            {% endif %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <span class="form-text text-danger">{{error|escape}}</span>
+                {% endfor %}
+            {% endif %}
+            {% if not hide_help %}
+                {% if safe_help  %}
+                <span class="form-text text-muted">{{field.help_text|safe}}</span>
+                {% else %}
+                <span class="form-text text-muted">{{field.help_text}}</span>
+                {% endif %}
+            {% endif %}
+
+        </div>
+    </div>
+
+{% endif %}

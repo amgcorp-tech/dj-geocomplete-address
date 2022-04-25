@@ -1,0 +1,26 @@
+{% load i18n sekizai_tags compress %}
+
+{% comment %}{% addtoblock "page_js" %}
+{% compress js file show_form_errors_notices %}
+    <script>
+    {% if form.errors %}
+        toastr.error("{{ form.errors|safe }}", "{% trans 'Form Error Notice!' %}")
+    {% endif %}
+    </script>
+{% endcompress %}
+{% endaddtoblock %}{% endcomment %}
+
+{% if form.errors %}
+<div class="notice d-flex bg-light-danger rounded border-danger border border-dashed rounded-3 p-6 mb-10">
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1">
+        <!--begin::Content-->
+        <div class="fw-bold">
+            <h4 class="text-gray-800 fw-bolder">{% trans "Error Notice!" %}</h4>
+            <div class="fs-6 text-gray-600">{{ form.errors|safe }}</div>
+        </div>
+        <!--end::Content-->
+    </div>
+    <!--end::Wrapper-->
+</div>
+{% endif %}

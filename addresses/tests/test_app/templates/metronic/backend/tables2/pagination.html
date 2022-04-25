@@ -1,0 +1,36 @@
+{% load django_tables2 %}
+{% load i18n %}
+
+{% if table.page and table.paginator.num_pages > 1 %}
+    <ul class="pagination">
+        {% if table.page.has_previous %}
+            {% if page_attr %}
+                <li class="page-item previous"><a href="?{{page_attr}}=1" class="page-link">{% trans "First" %}</a></li>
+                <li class="page-item previous"><a href="?{{page_attr}}={{table.page.previous_page_number}}" class="page-link">{% trans "Prev" %}</a></li>
+                <li class="page-item previous"><a href="?{{page_attr}}={{table.page.previous_page_number}}" class="page-link">{{ table.page.previous_page_number }}</a></li>
+            {% else %}
+                <li class="page-item previous"><a href="?page=1" class="page-link">{% trans "First" %}</a></li>
+                <li class="page-item previous"><a href="{% querystring table.prefixed_page_field=table.page.previous_page_number %}" class="page-link">{% trans "Prev" %}</a></li>
+                <li class="page-item previous"><a href="{% querystring table.prefixed_page_field=table.page.previous_page_number %}" class="page-link">{{ table.page.previous_page_number }}</a></li>
+              {% endif %}
+        {% endif %}
+
+        {% if page_attr %}
+            <li class="page-item active"><a href="?{{page_attr}}={{ table.page.number }}" class="page-link">{{ table.page.number }}</a></li>
+        {% else %}
+            <li class="page-item active"><a href="?page={{ table.page.number }}" class="page-link">{{ table.page.number }}</a></li>
+        {% endif %}
+
+        {% if table.page.has_next %}
+          {% if page_attr %}
+              <li class="page-item next"><a href="?{{page_attr}}={{table.page.next_page_number}}" class="page-link">{{ table.page.next_page_number }}</a></li>
+              <li class="page-item next"><a href="?{{page_attr}}={{table.page.next_page_number}}" class="page-link">{% trans "Next" %}</a></li>
+              <li class="page-item next"><a href="?{{page_attr}}={{table.paginator.num_pages}}" class="page-link">{% trans "Last" %}</a></li>
+          {% else %}
+              <li class="page-item next"><a href="{% querystring table.prefixed_page_field=table.page.next_page_number %}" class="page-link">{{ table.page.next_page_number }}</a></li>
+              <li class="page-item next"><a href="{% querystring table.prefixed_page_field=table.page.next_page_number %}" class="page-link">{% trans "Next" %}</a></li>
+              <li class="page-item next"><a href="{% querystring table.prefixed_page_field=table.paginator.num_pages %}" class="page-link">{% trans "Last" %}</a></li>
+          {% endif %}
+        {% endif %}
+    </ul>
+{% endif %}

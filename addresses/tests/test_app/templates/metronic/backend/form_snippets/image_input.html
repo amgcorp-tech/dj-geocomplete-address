@@ -1,0 +1,60 @@
+{% load i18n static widget_tweaks %}
+{% if field %}
+    <div class="form-group row">
+        <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ field.label }} {% if field.field.required %} <span class="text-danger"> *</span> {% endif %}</label>
+        <div class="col-lg-9 col-xl-9">
+            <div class="image-input image-input-outline image-input-changed" id="kt_image_4" style="background-image: url('{% if field.value %}{{field.value.url}}{% endif %}')">
+                <div class="image-input-wrapper"></div> {#  style="background-image: url('{% if field.value %}{{field.value.url}}{% endif %}');" #}
+                <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="{% if change_title %}{% trans change_title %}{% else %}{% trans "Change image" %}{% endif %}">
+                    <i class="fa fa-pen icon-sm text-muted"></i>
+                    {% comment %}{% render_field field %}{% endcomment %}
+                    {% if field.form.prefix %}
+                        <input type="file" name="{{ field.form.prefix }}-{{ field.name }}" id="{{ field.id_for_label }}">
+                    {% else %}
+                        <input type="file" name="{{ field.name }}" id="{{ field.id_for_label }}">
+                    {% endif %}
+                </label>
+                {% comment %}<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="" data-original-title="{% if cancel_test %}{% trans cancel_test %}{% else %}{% trans "Cancel image" %}{% endif %}">
+                    <i class="ki ki-bold-close icon-xs text-muted"></i>
+                </span>
+                <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove" data-toggle="tooltip" title="" data-original-title="{% if remove_test %}{% trans remove_test %}{% else %}{% trans "Remove image" %}{% endif %}">
+                    <i class="ki ki-bold-close icon-xs text-muted"></i>
+                </span>{% endcomment %}
+            </div>
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <span class="form-text text-danger">{{error|escape}}</span>
+                {% endfor %}
+            {% endif %}
+            {% if not hide_help %}
+                {% if safe_help  %}
+                <span class="form-text text-muted">{{field.help_text|safe}}</span>
+                {% else %}
+                <span class="form-text text-muted">{{field.help_text}}</span>
+                {% endif %}
+            {% endif %}
+            {% if field|field_type == 'imagefield' and field.value %}
+                {% if field.form.prefix %}
+                    <div class="checkbox-inline">
+                        <label class="checkbox checkbox-danger">
+                        <input type="checkbox" name="{{ field.form.prefix }}-{{ field.name }}-clear" id="{{ field.form.prefix }}-{{ field.name }}-clear_id">
+                        <span></span>
+                            <small class="text-muted">{% trans "Mark this box to delete current Image" %}</small>
+                        </label>
+                    </div>
+                {% else %}
+                    <div class="checkbox-inline">
+                        <label class="checkbox checkbox-danger">
+                            <input type="checkbox" name="{{ field.name }}-clear" id="{{ field.name }}-clear_id">
+                            <span></span>
+                            <small class="text-muted">{% trans "Mark this box to delete current Image" %}</small>
+                        </label>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+
+    </div>
+
+
+{% endif %}
