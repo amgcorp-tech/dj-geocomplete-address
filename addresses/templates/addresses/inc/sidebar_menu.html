@@ -1,0 +1,109 @@
+{% load i18n %}
+
+{% if perms.addresses %}
+<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
+
+    <div data-kt-menu-trigger="click" class="menu-item menu-accordion {% if request.resolver_match.url_name == "addresses_main" or request.resolver_match.url_name == "address_manage" or request.resolver_match.url_name == "address_new" or request.resolver_match.url_name == "countries_new" or request.resolver_match.url_name == "countries_manage" or request.resolver_match.url_name == "regions_new" or request.resolver_match.url_name == "regions_manage" %}here show{%endif%} ">
+        <span class="menu-link">
+            <span class="menu-icon">
+                <span class="svg-icon svg-icon-1">
+                    <i class="fa fa-compass fs-3"></i>
+                </span>
+            </span>
+            <span class="menu-title">{% trans "Addresses" %}</span>
+            <span class="menu-arrow"></span>
+        </span>
+        <div class="menu-sub menu-sub-accordion menu-active-bg">
+            <div class="menu-item">
+                <a class="menu-link {% if request.resolver_match.url_name == "addresses_main" %}active{%endif%}" href="{% url 'addresses_main' %}">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                    <span class="menu-title">{% trans "Main Control" %}</span>
+                </a>
+            </div>
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion {% if request.resolver_match.url_name == "address_new" or request.resolver_match.url_name == "address_manage" %}here show{%endif%}">
+                <span class="menu-link">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                    <span class="menu-title">{% trans "Address" %}</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                    <div class="menu-item">
+                        <a class="menu-link {% if request.resolver_match.url_name == "address_manage" %}active{%endif%}" href="{% url 'address_manage' %}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{% trans "List" %}</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link {% if request.resolver_match.url_name == "address_new" %}active{%endif%}" href="{% url 'address_new' %}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{% trans "New" %}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion {% if request.resolver_match.url_name == "countries_new" or request.resolver_match.url_name == "countries_manage" %}here show{%endif%}">
+                <span class="menu-link">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                    <span class="menu-title">{% trans "Countries" %}</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                    <div class="menu-item">
+                        <a class="menu-link {% if request.resolver_match.url_name == "countries_manage" %}active{%endif%}" href="{% url 'countries_manage' %}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{% trans "List" %}</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link {% if request.resolver_match.url_name == "countries_new" %}active{%endif%}" href="{% url 'countries_new' %}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{% trans "New" %}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion {% if request.resolver_match.url_name == "regions_new" or request.resolver_match.url_name == "regions_manage" %}here show{%endif%}">
+                <span class="menu-link">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                    <span class="menu-title">{% trans "Regions" %}</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                    <div class="menu-item">
+                        <a class="menu-link {% if request.resolver_match.url_name == "regions_manage" %}active{%endif%}" href="{% url 'regions_manage' %}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{% trans "List" %}</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link {% if request.resolver_match.url_name == "regions_new" %}active{%endif%}" href="{% url 'regions_new' %}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{% trans "New" %}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

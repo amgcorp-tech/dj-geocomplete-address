@@ -9,9 +9,13 @@ need a persistant database.
 from .test_settings import *  # NOQA
 
 from django.contrib import messages
+from decouple import config as env_config
 
 REQUIRED_APPS = [
-
+    "django_select2",
+    "django_tables2",
+    "django_filters",
+    "widget_tweaks",
 ]
 
 
@@ -36,3 +40,5 @@ MESSAGE_TAGS = {
     messages.WARNING: "bg-warning border-warning",
     messages.ERROR: "bg-danger border-danger",
 }
+
+GOOGLE_API_KEY = env_config('GOOGLE_API_KEY', None)

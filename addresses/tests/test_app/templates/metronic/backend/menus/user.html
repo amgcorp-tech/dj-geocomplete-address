@@ -6,7 +6,11 @@
     <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
         <div class="symbol symbol-40px me-3">
             <div class="symbol-label bg-danger text-light">
-                {{ request.user.email|slice:2|upper }}
+                {% if request.user.is_authenticated %}
+                    {{ request.user.username|slice:2|upper }}
+                {% else %}
+                    {% trans "?"|upper %}
+                {% endif %}
             </div>
         </div>
     </div>
@@ -19,7 +23,11 @@
                 <div class="symbol symbol-50px me-5">
                     <div class="symbol symbol-50px me-3">
                         <div class="symbol-label bg-danger text-light">
-                            {{ request.user.email|slice:2|upper }}
+                            {% if request.user.is_authenticated %}
+                                {{ request.user.username|slice:2|upper }}
+                            {% else %}
+                                {% trans "?"|upper %}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -28,7 +36,7 @@
                 <div class="d-flex flex-column">
                     <div class="fw-bolder d-flex align-items-center fs-5">{{ request.user|truncatechars:15 }}
                     {% comment %}<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span>{% endcomment %}</div>
-                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7">{{ request.user.show_email|truncatechars:20 }}</a>
+                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7">{{ request.user.email|truncatechars:20 }}</a>
                 </div>
                 <!--end::Username-->
             </div>
@@ -40,7 +48,7 @@
 
         <!--end::Menu separator-->
         <!--begin::Menu item-->
-        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start" data-kt-menu-flip="center, top">
+        {% comment %}<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start" data-kt-menu-flip="center, top">
             <a href="javascript:;" class="menu-link px-5">
                 <span class="menu-title position-relative">{% trans "Language" %}
                 {% if LANGUAGE_CODE == 'en' %}
@@ -51,7 +59,7 @@
                 <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">{{ "Espa&ntilde;ol"|safe  }}
                     <img class="w-15px h-15px rounded-1 ms-2" src="{% static 'metronic/assets/images/flags/spain.svg' %}" alt="{% trans "Espa&ntilde;a"|safe %}" />
                 </span>
-                {% comment %}{% elif LANGUAGE_CODE == 'fr' %}
+                {% elif LANGUAGE_CODE == 'fr' %}
                 <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">Français
                     <img class="w-15px h-15px rounded-1 ms-2" src="{% static 'metronic/assets/images/flags/france.svg' %}" alt="{% trans "France" %}" />
                 </span>
@@ -74,7 +82,7 @@
                 {% elif LANGUAGE_CODE == 'ja' %}
                 <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">日本語
                     <img class="w-15px h-15px rounded-1 ms-2" src="{% static 'metronic/assets/images/flags/japan.svg' %}" alt="{% trans "Japan" %}" />
-                </span>{% endcomment %}
+                </span>
                 {% endif %}
                 </span>
             </a>
@@ -82,7 +90,7 @@
             <div class="menu-sub menu-sub-dropdown w-175px py-4">
                 <!--begin::Menu item-->
                 <div class="menu-item px-3">
-                    <a href="{% comment %}{% url 'profiles:set_user_language' %}{% endcomment %}?language=en" class="menu-link d-flex px-5 {% if LANGUAGE_CODE == 'en' %}active{% endif %}">
+                    <a href="{% url 'profiles:set_user_language' %}?language=en" class="menu-link d-flex px-5 {% if LANGUAGE_CODE == 'en' %}active{% endif %}">
                     <span class="symbol symbol-20px me-4">
                         <img class="rounded-1" src="{% static 'metronic/assets/images/flags/united-states.svg' %}" alt="{% trans "USA" %}" />
                     </span>English</a>
@@ -90,13 +98,13 @@
                 <!--end::Menu item-->
                 <!--begin::Menu item-->
                 <div class="menu-item px-3">
-                    <a href="{% comment %}{% url 'profiles:set_user_language' %}{% endcomment %}?language=es" class="menu-link d-flex px-5 {% if LANGUAGE_CODE == 'es' %}active{% endif %}">
+                    <a href="{% url 'profiles:set_user_language' %}?language=es" class="menu-link d-flex px-5 {% if LANGUAGE_CODE == 'es' %}active{% endif %}">
                     <span class="symbol symbol-20px me-4">
                         <img class="rounded-1" src="{% static 'metronic/assets/images/flags/spain.svg' %}" alt="{% trans "Espa&ntilde;a"|safe %}" />
                     </span>{{ "Espa&ntilde;ol"|safe  }}</a>
                 </div>
                 <!--end::Menu item-->
-                {% comment %}<!--begin::Menu item-->
+                <!--begin::Menu item-->
                 <div class="menu-item px-3">
                     <a href="{% url 'profiles:set_user_language' %}?language=de" class="menu-link d-flex px-5 {% if LANGUAGE_CODE == 'de' %}active{% endif %}">
                     <span class="symbol symbol-20px me-4">
@@ -143,18 +151,46 @@
                         <img class="rounded-1" src="{% static 'metronic/assets/images/flags/japan.svg' %}" alt="{% trans "Japan" %}" />
                     </span>日本語</a>
                 </div>
-                <!--end::Menu item-->{% endcomment %}
+                <!--end::Menu item-->
             </div>
             <!--end::Menu sub-->
-        </div>
+        </div>{% endcomment %}
         <!--end::Menu item-->
 
 
-        <div class="separator my-2"></div>
-
+        {% if request.user.is_authenticated %}
         <div class="menu-item px-5">
-            <a href="{% url 'admin:logout' %}" class="menu-link px-5">{% trans 'Logout' %}</a>
+            <a href="{% url 'admin:logout' %}" class="menu-link px-5">
+                <span class="svg-icon svg-icon-2x me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M14.0069431,7.00607258 C13.4546584,7.00607258 13.0069431,6.55855153 13.0069431,6.00650634 C13.0069431,5.45446114 13.4546584,5.00694009 14.0069431,5.00694009 L15.0069431,5.00694009 C17.2160821,5.00694009 19.0069431,6.7970243 19.0069431,9.00520507 L19.0069431,15.001735 C19.0069431,17.2099158 17.2160821,19 15.0069431,19 L3.00694311,19 C0.797804106,19 -0.993056895,17.2099158 -0.993056895,15.001735 L-0.993056895,8.99826498 C-0.993056895,6.7900842 0.797804106,5 3.00694311,5 L4.00694793,5 C4.55923268,5 5.00694793,5.44752105 5.00694793,5.99956624 C5.00694793,6.55161144 4.55923268,6.99913249 4.00694793,6.99913249 L3.00694311,6.99913249 C1.90237361,6.99913249 1.00694311,7.89417459 1.00694311,8.99826498 L1.00694311,15.001735 C1.00694311,16.1058254 1.90237361,17.0008675 3.00694311,17.0008675 L15.0069431,17.0008675 C16.1115126,17.0008675 17.0069431,16.1058254 17.0069431,15.001735 L17.0069431,9.00520507 C17.0069431,7.90111468 16.1115126,7.00607258 15.0069431,7.00607258 L14.0069431,7.00607258 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.006943, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-9.006943, -12.000000) "/>
+                            <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) rotate(-270.000000) translate(-14.000000, -12.000000) " x="13" y="6" width="2" height="12" rx="1"/>
+                            <path d="M21.7928932,9.79289322 C22.1834175,9.40236893 22.8165825,9.40236893 23.2071068,9.79289322 C23.5976311,10.1834175 23.5976311,10.8165825 23.2071068,11.2071068 L20.2071068,14.2071068 C19.8165825,14.5976311 19.1834175,14.5976311 18.7928932,14.2071068 L15.7928932,11.2071068 C15.4023689,10.8165825 15.4023689,10.1834175 15.7928932,9.79289322 C16.1834175,9.40236893 16.8165825,9.40236893 17.2071068,9.79289322 L19.5,12.0857864 L21.7928932,9.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(19.500000, 12.000000) rotate(-90.000000) translate(-19.500000, -12.000000) "/>
+                        </g>
+                    </svg>
+                </span>
+                {% trans 'Logout' %}
+            </a>
         </div>
+        {% else %}
+        <div class="menu-item px-5">
+            <a href="{% url 'admin:login' %}" class="menu-link px-5">
+                <span class="svg-icon svg-icon-2x me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <rect fill="#000000" opacity="0.3" transform="translate(9.000000, 12.000000) rotate(-270.000000) translate(-9.000000, -12.000000) " x="8" y="6" width="2" height="12" rx="1"/>
+                            <path d="M20,7.00607258 C19.4477153,7.00607258 19,6.55855153 19,6.00650634 C19,5.45446114 19.4477153,5.00694009 20,5.00694009 L21,5.00694009 C23.209139,5.00694009 25,6.7970243 25,9.00520507 L25,15.001735 C25,17.2099158 23.209139,19 21,19 L9,19 C6.790861,19 5,17.2099158 5,15.001735 L5,8.99826498 C5,6.7900842 6.790861,5 9,5 L10.0000048,5 C10.5522896,5 11.0000048,5.44752105 11.0000048,5.99956624 C11.0000048,6.55161144 10.5522896,6.99913249 10.0000048,6.99913249 L9,6.99913249 C7.8954305,6.99913249 7,7.89417459 7,8.99826498 L7,15.001735 C7,16.1058254 7.8954305,17.0008675 9,17.0008675 L21,17.0008675 C22.1045695,17.0008675 23,16.1058254 23,15.001735 L23,9.00520507 C23,7.90111468 22.1045695,7.00607258 21,7.00607258 L20,7.00607258 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.000000, 12.000000) rotate(-90.000000) translate(-15.000000, -12.000000) "/>
+                            <path d="M16.7928932,9.79289322 C17.1834175,9.40236893 17.8165825,9.40236893 18.2071068,9.79289322 C18.5976311,10.1834175 18.5976311,10.8165825 18.2071068,11.2071068 L15.2071068,14.2071068 C14.8165825,14.5976311 14.1834175,14.5976311 13.7928932,14.2071068 L10.7928932,11.2071068 C10.4023689,10.8165825 10.4023689,10.1834175 10.7928932,9.79289322 C11.1834175,9.40236893 11.8165825,9.40236893 12.2071068,9.79289322 L14.5,12.0857864 L16.7928932,9.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.500000, 12.000000) rotate(-90.000000) translate(-14.500000, -12.000000) "/>
+                        </g>
+                    </svg>
+                </span>
+                {% trans 'Login' %}
+            </a>
+        </div>
+        {% endif %}
 
     </div>
     <!--end::Menu-->

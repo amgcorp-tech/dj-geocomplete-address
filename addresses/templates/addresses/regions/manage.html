@@ -1,0 +1,17 @@
+{% extends 'tables.html' %}
+{% load i18n compress sekizai_tags%}
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block breadcrumbs_actions %}
+    <a href="{% url "regions_new" %}" class="btn btn-sm btn-primary">{% trans "Add new" %}</a>
+{% endblock %}
+
+{% block table_actions %}
+<div class="menu-item px-3">
+    <a href="{% url 'regions_delete_bulk' %}" class="menu-link px-3 apply-bulk-action">{% trans "Delete Selected" %}</a>
+</div>
+{% endblock %}
+
+

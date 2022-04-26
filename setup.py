@@ -45,16 +45,17 @@ def read(fname):
         return ''
 
 setup(
-    name="dj-addresses",
+    name="dj-geocomplete-address",
     version=app.__version__,
     description=read('DESCRIPTION'),
     long_description=read('README.rst'),
+    long_description_content_type="text/markdown",
     license='The MIT License',
     platforms=['OS Independent'],
-    keywords='django, app, addresses, address, countries, localities, regions, postal codes, geocode',
+    keywords='django, google, addresses, address, countries, localities, regions, postal codes, geocode',
     author='AMG Technologies Corp',
     author_email='yarel@amgtechnologiescorp.com',
-    url="git@github.com:amgcorp-tech/dj-addresses",
+    url="https://github.com/amgcorp-tech/dj-geocomplete-address.git",
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,

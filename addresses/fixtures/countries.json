@@ -1,0 +1,3213 @@
+[
+  {
+    "model": "addresses.country",
+    "pk": 1,
+    "fields": {
+      "is_active": false,
+      "name": "Afghanistan",
+      "code3": "AFG",
+      "code": "AF",
+      "phone_code": "93",
+      "capital": "Kabul",
+      "currency": "AFN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 2,
+    "fields": {
+      "is_active": false,
+      "name": "Aland Islands",
+      "code3": "ALA",
+      "code": "AX",
+      "phone_code": "+358-18",
+      "capital": "Mariehamn",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 3,
+    "fields": {
+      "is_active": false,
+      "name": "Albania",
+      "code3": "ALB",
+      "code": "AL",
+      "phone_code": "355",
+      "capital": "Tirana",
+      "currency": "ALL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 4,
+    "fields": {
+      "is_active": false,
+      "name": "Algeria",
+      "code3": "DZA",
+      "code": "DZ",
+      "phone_code": "213",
+      "capital": "Algiers",
+      "currency": "DZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 5,
+    "fields": {
+      "is_active": false,
+      "name": "American Samoa",
+      "code3": "ASM",
+      "code": "AS",
+      "phone_code": "+1-684",
+      "capital": "Pago Pago",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 6,
+    "fields": {
+      "is_active": false,
+      "name": "Andorra",
+      "code3": "AND",
+      "code": "AD",
+      "phone_code": "376",
+      "capital": "Andorra la Vella",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 7,
+    "fields": {
+      "is_active": false,
+      "name": "Angola",
+      "code3": "AGO",
+      "code": "AO",
+      "phone_code": "244",
+      "capital": "Luanda",
+      "currency": "AOA"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 8,
+    "fields": {
+      "is_active": false,
+      "name": "Anguilla",
+      "code3": "AIA",
+      "code": "AI",
+      "phone_code": "+1-264",
+      "capital": "The Valley",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 9,
+    "fields": {
+      "is_active": false,
+      "name": "Antarctica",
+      "code3": "ATA",
+      "code": "AQ",
+      "phone_code": "",
+      "capital": "",
+      "currency": ""
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 10,
+    "fields": {
+      "is_active": false,
+      "name": "Antigua And Barbuda",
+      "code3": "ATG",
+      "code": "AG",
+      "phone_code": "+1-268",
+      "capital": "St. John's",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 11,
+    "fields": {
+      "is_active": true,
+      "name": "Argentina",
+      "code3": "ARG",
+      "code": "AR",
+      "phone_code": "54",
+      "capital": "Buenos Aires",
+      "currency": "ARS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 12,
+    "fields": {
+      "is_active": false,
+      "name": "Armenia",
+      "code3": "ARM",
+      "code": "AM",
+      "phone_code": "374",
+      "capital": "Yerevan",
+      "currency": "AMD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 13,
+    "fields": {
+      "is_active": false,
+      "name": "Aruba",
+      "code3": "ABW",
+      "code": "AW",
+      "phone_code": "297",
+      "capital": "Oranjestad",
+      "currency": "AWG"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 14,
+    "fields": {
+      "is_active": false,
+      "name": "Australia",
+      "code3": "AUS",
+      "code": "AU",
+      "phone_code": "61",
+      "capital": "Canberra",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 15,
+    "fields": {
+      "is_active": false,
+      "name": "Austria",
+      "code3": "AUT",
+      "code": "AT",
+      "phone_code": "43",
+      "capital": "Vienna",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 16,
+    "fields": {
+      "is_active": false,
+      "name": "Azerbaijan",
+      "code3": "AZE",
+      "code": "AZ",
+      "phone_code": "994",
+      "capital": "Baku",
+      "currency": "AZN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 17,
+    "fields": {
+      "is_active": true,
+      "name": "Bahamas The",
+      "code3": "BHS",
+      "code": "BS",
+      "phone_code": "+1-242",
+      "capital": "Nassau",
+      "currency": "BSD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 18,
+    "fields": {
+      "is_active": false,
+      "name": "Bahrain",
+      "code3": "BHR",
+      "code": "BH",
+      "phone_code": "973",
+      "capital": "Manama",
+      "currency": "BHD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 19,
+    "fields": {
+      "is_active": false,
+      "name": "Bangladesh",
+      "code3": "BGD",
+      "code": "BD",
+      "phone_code": "880",
+      "capital": "Dhaka",
+      "currency": "BDT"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 20,
+    "fields": {
+      "is_active": false,
+      "name": "Barbados",
+      "code3": "BRB",
+      "code": "BB",
+      "phone_code": "+1-246",
+      "capital": "Bridgetown",
+      "currency": "BBD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 21,
+    "fields": {
+      "is_active": false,
+      "name": "Belarus",
+      "code3": "BLR",
+      "code": "BY",
+      "phone_code": "375",
+      "capital": "Minsk",
+      "currency": "BYR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 22,
+    "fields": {
+      "is_active": false,
+      "name": "Belgium",
+      "code3": "BEL",
+      "code": "BE",
+      "phone_code": "32",
+      "capital": "Brussels",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 23,
+    "fields": {
+      "is_active": false,
+      "name": "Belize",
+      "code3": "BLZ",
+      "code": "BZ",
+      "phone_code": "501",
+      "capital": "Belmopan",
+      "currency": "BZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 24,
+    "fields": {
+      "is_active": false,
+      "name": "Benin",
+      "code3": "BEN",
+      "code": "BJ",
+      "phone_code": "229",
+      "capital": "Porto-Novo",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 25,
+    "fields": {
+      "is_active": false,
+      "name": "Bermuda",
+      "code3": "BMU",
+      "code": "BM",
+      "phone_code": "+1-441",
+      "capital": "Hamilton",
+      "currency": "BMD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 26,
+    "fields": {
+      "is_active": false,
+      "name": "Bhutan",
+      "code3": "BTN",
+      "code": "BT",
+      "phone_code": "975",
+      "capital": "Thimphu",
+      "currency": "BTN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 27,
+    "fields": {
+      "is_active": false,
+      "name": "Bolivia",
+      "code3": "BOL",
+      "code": "BO",
+      "phone_code": "591",
+      "capital": "Sucre",
+      "currency": "BOB"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 28,
+    "fields": {
+      "is_active": false,
+      "name": "Bosnia and Herzegovina",
+      "code3": "BIH",
+      "code": "BA",
+      "phone_code": "387",
+      "capital": "Sarajevo",
+      "currency": "BAM"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 29,
+    "fields": {
+      "is_active": false,
+      "name": "Botswana",
+      "code3": "BWA",
+      "code": "BW",
+      "phone_code": "267",
+      "capital": "Gaborone",
+      "currency": "BWP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 30,
+    "fields": {
+      "is_active": false,
+      "name": "Bouvet Island",
+      "code3": "BVT",
+      "code": "BV",
+      "phone_code": "",
+      "capital": "",
+      "currency": "NOK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 31,
+    "fields": {
+      "is_active": true,
+      "name": "Brazil",
+      "code3": "BRA",
+      "code": "BR",
+      "phone_code": "55",
+      "capital": "Brasilia",
+      "currency": "BRL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 32,
+    "fields": {
+      "is_active": false,
+      "name": "British Indian Ocean Territory",
+      "code3": "IOT",
+      "code": "IO",
+      "phone_code": "246",
+      "capital": "Diego Garcia",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 33,
+    "fields": {
+      "is_active": false,
+      "name": "Brunei",
+      "code3": "BRN",
+      "code": "BN",
+      "phone_code": "673",
+      "capital": "Bandar Seri Begawan",
+      "currency": "BND"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 34,
+    "fields": {
+      "is_active": false,
+      "name": "Bulgaria",
+      "code3": "BGR",
+      "code": "BG",
+      "phone_code": "359",
+      "capital": "Sofia",
+      "currency": "BGN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 35,
+    "fields": {
+      "is_active": false,
+      "name": "Burkina Faso",
+      "code3": "BFA",
+      "code": "BF",
+      "phone_code": "226",
+      "capital": "Ouagadougou",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 36,
+    "fields": {
+      "is_active": false,
+      "name": "Burundi",
+      "code3": "BDI",
+      "code": "BI",
+      "phone_code": "257",
+      "capital": "Bujumbura",
+      "currency": "BIF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 37,
+    "fields": {
+      "is_active": false,
+      "name": "Cambodia",
+      "code3": "KHM",
+      "code": "KH",
+      "phone_code": "855",
+      "capital": "Phnom Penh",
+      "currency": "KHR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 38,
+    "fields": {
+      "is_active": false,
+      "name": "Cameroon",
+      "code3": "CMR",
+      "code": "CM",
+      "phone_code": "237",
+      "capital": "Yaounde",
+      "currency": "XAF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 39,
+    "fields": {
+      "is_active": true,
+      "name": "Canada",
+      "code3": "CAN",
+      "code": "CA",
+      "phone_code": "1",
+      "capital": "Ottawa",
+      "currency": "CAD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 40,
+    "fields": {
+      "is_active": false,
+      "name": "Cape Verde",
+      "code3": "CPV",
+      "code": "CV",
+      "phone_code": "238",
+      "capital": "Praia",
+      "currency": "CVE"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 41,
+    "fields": {
+      "is_active": false,
+      "name": "Cayman Islands",
+      "code3": "CYM",
+      "code": "KY",
+      "phone_code": "+1-345",
+      "capital": "George Town",
+      "currency": "KYD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 42,
+    "fields": {
+      "is_active": false,
+      "name": "Central African Republic",
+      "code3": "CAF",
+      "code": "CF",
+      "phone_code": "236",
+      "capital": "Bangui",
+      "currency": "XAF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 43,
+    "fields": {
+      "is_active": false,
+      "name": "Chad",
+      "code3": "TCD",
+      "code": "TD",
+      "phone_code": "235",
+      "capital": "N'Djamena",
+      "currency": "XAF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 44,
+    "fields": {
+      "is_active": true,
+      "name": "Chile",
+      "code3": "CHL",
+      "code": "CL",
+      "phone_code": "56",
+      "capital": "Santiago",
+      "currency": "CLP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 45,
+    "fields": {
+      "is_active": false,
+      "name": "China",
+      "code3": "CHN",
+      "code": "CN",
+      "phone_code": "86",
+      "capital": "Beijing",
+      "currency": "CNY"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 46,
+    "fields": {
+      "is_active": false,
+      "name": "Christmas Island",
+      "code3": "CXR",
+      "code": "CX",
+      "phone_code": "61",
+      "capital": "Flying Fish Cove",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 47,
+    "fields": {
+      "is_active": false,
+      "name": "Cocos (Keeling) Islands",
+      "code3": "CCK",
+      "code": "CC",
+      "phone_code": "61",
+      "capital": "West Island",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 48,
+    "fields": {
+      "is_active": true,
+      "name": "Colombia",
+      "code3": "COL",
+      "code": "CO",
+      "phone_code": "57",
+      "capital": "Bogota",
+      "currency": "COP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 49,
+    "fields": {
+      "is_active": false,
+      "name": "Comoros",
+      "code3": "COM",
+      "code": "KM",
+      "phone_code": "269",
+      "capital": "Moroni",
+      "currency": "KMF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 50,
+    "fields": {
+      "is_active": false,
+      "name": "Congo",
+      "code3": "COG",
+      "code": "CG",
+      "phone_code": "242",
+      "capital": "Brazzaville",
+      "currency": "XAF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 51,
+    "fields": {
+      "is_active": false,
+      "name": "Congo The Democratic Republic Of The",
+      "code3": "COD",
+      "code": "CD",
+      "phone_code": "243",
+      "capital": "Kinshasa",
+      "currency": "CDF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 52,
+    "fields": {
+      "is_active": false,
+      "name": "Cook Islands",
+      "code3": "COK",
+      "code": "CK",
+      "phone_code": "682",
+      "capital": "Avarua",
+      "currency": "NZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 53,
+    "fields": {
+      "is_active": false,
+      "name": "Costa Rica",
+      "code3": "CRI",
+      "code": "CR",
+      "phone_code": "506",
+      "capital": "San Jose",
+      "currency": "CRC"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 54,
+    "fields": {
+      "is_active": false,
+      "name": "Cote D'Ivoire (Ivory Coast)",
+      "code3": "CIV",
+      "code": "CI",
+      "phone_code": "225",
+      "capital": "Yamoussoukro",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 55,
+    "fields": {
+      "is_active": false,
+      "name": "Croatia (Hrvatska)",
+      "code3": "HRV",
+      "code": "HR",
+      "phone_code": "385",
+      "capital": "Zagreb",
+      "currency": "HRK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 56,
+    "fields": {
+      "is_active": true,
+      "name": "Cuba",
+      "code3": "CUB",
+      "code": "CU",
+      "phone_code": "53",
+      "capital": "Havana",
+      "currency": "CUP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 57,
+    "fields": {
+      "is_active": false,
+      "name": "Cyprus",
+      "code3": "CYP",
+      "code": "CY",
+      "phone_code": "357",
+      "capital": "Nicosia",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 58,
+    "fields": {
+      "is_active": false,
+      "name": "Czech Republic",
+      "code3": "CZE",
+      "code": "CZ",
+      "phone_code": "420",
+      "capital": "Prague",
+      "currency": "CZK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 59,
+    "fields": {
+      "is_active": false,
+      "name": "Denmark",
+      "code3": "DNK",
+      "code": "DK",
+      "phone_code": "45",
+      "capital": "Copenhagen",
+      "currency": "DKK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 60,
+    "fields": {
+      "is_active": false,
+      "name": "Djibouti",
+      "code3": "DJI",
+      "code": "DJ",
+      "phone_code": "253",
+      "capital": "Djibouti",
+      "currency": "DJF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 61,
+    "fields": {
+      "is_active": false,
+      "name": "Dominica",
+      "code3": "DMA",
+      "code": "DM",
+      "phone_code": "+1-767",
+      "capital": "Roseau",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 62,
+    "fields": {
+      "is_active": true,
+      "name": "Dominican Republic",
+      "code3": "DOM",
+      "code": "DO",
+      "phone_code": "+1-809 and 1-829",
+      "capital": "Santo Domingo",
+      "currency": "DOP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 63,
+    "fields": {
+      "is_active": false,
+      "name": "East Timor",
+      "code3": "TLS",
+      "code": "TL",
+      "phone_code": "670",
+      "capital": "Dili",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 64,
+    "fields": {
+      "is_active": true,
+      "name": "Ecuador",
+      "code3": "ECU",
+      "code": "EC",
+      "phone_code": "593",
+      "capital": "Quito",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 65,
+    "fields": {
+      "is_active": false,
+      "name": "Egypt",
+      "code3": "EGY",
+      "code": "EG",
+      "phone_code": "20",
+      "capital": "Cairo",
+      "currency": "EGP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 66,
+    "fields": {
+      "is_active": true,
+      "name": "El Salvador",
+      "code3": "SLV",
+      "code": "SV",
+      "phone_code": "503",
+      "capital": "San Salvador",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 67,
+    "fields": {
+      "is_active": false,
+      "name": "Equatorial Guinea",
+      "code3": "GNQ",
+      "code": "GQ",
+      "phone_code": "240",
+      "capital": "Malabo",
+      "currency": "XAF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 68,
+    "fields": {
+      "is_active": false,
+      "name": "Eritrea",
+      "code3": "ERI",
+      "code": "ER",
+      "phone_code": "291",
+      "capital": "Asmara",
+      "currency": "ERN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 69,
+    "fields": {
+      "is_active": false,
+      "name": "Estonia",
+      "code3": "EST",
+      "code": "EE",
+      "phone_code": "372",
+      "capital": "Tallinn",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 70,
+    "fields": {
+      "is_active": false,
+      "name": "Ethiopia",
+      "code3": "ETH",
+      "code": "ET",
+      "phone_code": "251",
+      "capital": "Addis Ababa",
+      "currency": "ETB"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 71,
+    "fields": {
+      "is_active": false,
+      "name": "Falkland Islands",
+      "code3": "FLK",
+      "code": "FK",
+      "phone_code": "500",
+      "capital": "Stanley",
+      "currency": "FKP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 72,
+    "fields": {
+      "is_active": false,
+      "name": "Faroe Islands",
+      "code3": "FRO",
+      "code": "FO",
+      "phone_code": "298",
+      "capital": "Torshavn",
+      "currency": "DKK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 73,
+    "fields": {
+      "is_active": false,
+      "name": "Fiji Islands",
+      "code3": "FJI",
+      "code": "FJ",
+      "phone_code": "679",
+      "capital": "Suva",
+      "currency": "FJD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 74,
+    "fields": {
+      "is_active": false,
+      "name": "Finland",
+      "code3": "FIN",
+      "code": "FI",
+      "phone_code": "358",
+      "capital": "Helsinki",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 75,
+    "fields": {
+      "is_active": false,
+      "name": "France",
+      "code3": "FRA",
+      "code": "FR",
+      "phone_code": "33",
+      "capital": "Paris",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 76,
+    "fields": {
+      "is_active": false,
+      "name": "French Guiana",
+      "code3": "GUF",
+      "code": "GF",
+      "phone_code": "594",
+      "capital": "Cayenne",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 77,
+    "fields": {
+      "is_active": false,
+      "name": "French Polynesia",
+      "code3": "PYF",
+      "code": "PF",
+      "phone_code": "689",
+      "capital": "Papeete",
+      "currency": "XPF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 78,
+    "fields": {
+      "is_active": false,
+      "name": "French Southern Territories",
+      "code3": "ATF",
+      "code": "TF",
+      "phone_code": "",
+      "capital": "Port-aux-Francais",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 79,
+    "fields": {
+      "is_active": false,
+      "name": "Gabon",
+      "code3": "GAB",
+      "code": "GA",
+      "phone_code": "241",
+      "capital": "Libreville",
+      "currency": "XAF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 80,
+    "fields": {
+      "is_active": false,
+      "name": "Gambia The",
+      "code3": "GMB",
+      "code": "GM",
+      "phone_code": "220",
+      "capital": "Banjul",
+      "currency": "GMD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 81,
+    "fields": {
+      "is_active": false,
+      "name": "Georgia",
+      "code3": "GEO",
+      "code": "GE",
+      "phone_code": "995",
+      "capital": "Tbilisi",
+      "currency": "GEL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 82,
+    "fields": {
+      "is_active": false,
+      "name": "Germany",
+      "code3": "DEU",
+      "code": "DE",
+      "phone_code": "49",
+      "capital": "Berlin",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 83,
+    "fields": {
+      "is_active": false,
+      "name": "Ghana",
+      "code3": "GHA",
+      "code": "GH",
+      "phone_code": "233",
+      "capital": "Accra",
+      "currency": "GHS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 84,
+    "fields": {
+      "is_active": false,
+      "name": "Gibraltar",
+      "code3": "GIB",
+      "code": "GI",
+      "phone_code": "350",
+      "capital": "Gibraltar",
+      "currency": "GIP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 85,
+    "fields": {
+      "is_active": false,
+      "name": "Greece",
+      "code3": "GRC",
+      "code": "GR",
+      "phone_code": "30",
+      "capital": "Athens",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 86,
+    "fields": {
+      "is_active": false,
+      "name": "Greenland",
+      "code3": "GRL",
+      "code": "GL",
+      "phone_code": "299",
+      "capital": "Nuuk",
+      "currency": "DKK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 87,
+    "fields": {
+      "is_active": false,
+      "name": "Grenada",
+      "code3": "GRD",
+      "code": "GD",
+      "phone_code": "+1-473",
+      "capital": "St. George's",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 88,
+    "fields": {
+      "is_active": false,
+      "name": "Guadeloupe",
+      "code3": "GLP",
+      "code": "GP",
+      "phone_code": "590",
+      "capital": "Basse-Terre",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 89,
+    "fields": {
+      "is_active": false,
+      "name": "Guam",
+      "code3": "GUM",
+      "code": "GU",
+      "phone_code": "+1-671",
+      "capital": "Hagatna",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 90,
+    "fields": {
+      "is_active": true,
+      "name": "Guatemala",
+      "code3": "GTM",
+      "code": "GT",
+      "phone_code": "502",
+      "capital": "Guatemala City",
+      "currency": "GTQ"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 91,
+    "fields": {
+      "is_active": false,
+      "name": "Guernsey and Alderney",
+      "code3": "GGY",
+      "code": "GG",
+      "phone_code": "+44-1481",
+      "capital": "St Peter Port",
+      "currency": "GBP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 92,
+    "fields": {
+      "is_active": false,
+      "name": "Guinea",
+      "code3": "GIN",
+      "code": "GN",
+      "phone_code": "224",
+      "capital": "Conakry",
+      "currency": "GNF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 93,
+    "fields": {
+      "is_active": false,
+      "name": "Guinea-Bissau",
+      "code3": "GNB",
+      "code": "GW",
+      "phone_code": "245",
+      "capital": "Bissau",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 94,
+    "fields": {
+      "is_active": false,
+      "name": "Guyana",
+      "code3": "GUY",
+      "code": "GY",
+      "phone_code": "592",
+      "capital": "Georgetown",
+      "currency": "GYD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 95,
+    "fields": {
+      "is_active": false,
+      "name": "Haiti",
+      "code3": "HTI",
+      "code": "HT",
+      "phone_code": "509",
+      "capital": "Port-au-Prince",
+      "currency": "HTG"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 96,
+    "fields": {
+      "is_active": false,
+      "name": "Heard and McDonald Islands",
+      "code3": "HMD",
+      "code": "HM",
+      "phone_code": " ",
+      "capital": "",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 97,
+    "fields": {
+      "is_active": true,
+      "name": "Honduras",
+      "code3": "HND",
+      "code": "HN",
+      "phone_code": "504",
+      "capital": "Tegucigalpa",
+      "currency": "HNL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 98,
+    "fields": {
+      "is_active": false,
+      "name": "Hong Kong S.A.R.",
+      "code3": "HKG",
+      "code": "HK",
+      "phone_code": "852",
+      "capital": "Hong Kong",
+      "currency": "HKD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 99,
+    "fields": {
+      "is_active": false,
+      "name": "Hungary",
+      "code3": "HUN",
+      "code": "HU",
+      "phone_code": "36",
+      "capital": "Budapest",
+      "currency": "HUF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 100,
+    "fields": {
+      "is_active": false,
+      "name": "Iceland",
+      "code3": "ISL",
+      "code": "IS",
+      "phone_code": "354",
+      "capital": "Reykjavik",
+      "currency": "ISK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 101,
+    "fields": {
+      "is_active": false,
+      "name": "India",
+      "code3": "IND",
+      "code": "IN",
+      "phone_code": "91",
+      "capital": "New Delhi",
+      "currency": "INR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 102,
+    "fields": {
+      "is_active": false,
+      "name": "Indonesia",
+      "code3": "IDN",
+      "code": "ID",
+      "phone_code": "62",
+      "capital": "Jakarta",
+      "currency": "IDR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 103,
+    "fields": {
+      "is_active": false,
+      "name": "Iran",
+      "code3": "IRN",
+      "code": "IR",
+      "phone_code": "98",
+      "capital": "Tehran",
+      "currency": "IRR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 104,
+    "fields": {
+      "is_active": false,
+      "name": "Iraq",
+      "code3": "IRQ",
+      "code": "IQ",
+      "phone_code": "964",
+      "capital": "Baghdad",
+      "currency": "IQD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 105,
+    "fields": {
+      "is_active": false,
+      "name": "Ireland",
+      "code3": "IRL",
+      "code": "IE",
+      "phone_code": "353",
+      "capital": "Dublin",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 106,
+    "fields": {
+      "is_active": false,
+      "name": "Israel",
+      "code3": "ISR",
+      "code": "IL",
+      "phone_code": "972",
+      "capital": "Jerusalem",
+      "currency": "ILS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 107,
+    "fields": {
+      "is_active": false,
+      "name": "Italy",
+      "code3": "ITA",
+      "code": "IT",
+      "phone_code": "39",
+      "capital": "Rome",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 108,
+    "fields": {
+      "is_active": true,
+      "name": "Jamaica",
+      "code3": "JAM",
+      "code": "JM",
+      "phone_code": "+1-876",
+      "capital": "Kingston",
+      "currency": "JMD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 109,
+    "fields": {
+      "is_active": false,
+      "name": "Japan",
+      "code3": "JPN",
+      "code": "JP",
+      "phone_code": "81",
+      "capital": "Tokyo",
+      "currency": "JPY"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 110,
+    "fields": {
+      "is_active": false,
+      "name": "Jersey",
+      "code3": "JEY",
+      "code": "JE",
+      "phone_code": "+44-1534",
+      "capital": "Saint Helier",
+      "currency": "GBP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 111,
+    "fields": {
+      "is_active": false,
+      "name": "Jordan",
+      "code3": "JOR",
+      "code": "JO",
+      "phone_code": "962",
+      "capital": "Amman",
+      "currency": "JOD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 112,
+    "fields": {
+      "is_active": false,
+      "name": "Kazakhstan",
+      "code3": "KAZ",
+      "code": "KZ",
+      "phone_code": "7",
+      "capital": "Astana",
+      "currency": "KZT"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 113,
+    "fields": {
+      "is_active": false,
+      "name": "Kenya",
+      "code3": "KEN",
+      "code": "KE",
+      "phone_code": "254",
+      "capital": "Nairobi",
+      "currency": "KES"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 114,
+    "fields": {
+      "is_active": false,
+      "name": "Kiribati",
+      "code3": "KIR",
+      "code": "KI",
+      "phone_code": "686",
+      "capital": "Tarawa",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 115,
+    "fields": {
+      "is_active": false,
+      "name": "Korea North",
+      "code3": "PRK",
+      "code": "KP",
+      "phone_code": "850",
+      "capital": "Pyongyang",
+      "currency": "KPW"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 116,
+    "fields": {
+      "is_active": false,
+      "name": "Korea South",
+      "code3": "KOR",
+      "code": "KR",
+      "phone_code": "82",
+      "capital": "Seoul",
+      "currency": "KRW"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 117,
+    "fields": {
+      "is_active": false,
+      "name": "Kuwait",
+      "code3": "KWT",
+      "code": "KW",
+      "phone_code": "965",
+      "capital": "Kuwait City",
+      "currency": "KWD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 118,
+    "fields": {
+      "is_active": false,
+      "name": "Kyrgyzstan",
+      "code3": "KGZ",
+      "code": "KG",
+      "phone_code": "996",
+      "capital": "Bishkek",
+      "currency": "KGS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 119,
+    "fields": {
+      "is_active": false,
+      "name": "Laos",
+      "code3": "LAO",
+      "code": "LA",
+      "phone_code": "856",
+      "capital": "Vientiane",
+      "currency": "LAK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 120,
+    "fields": {
+      "is_active": false,
+      "name": "Latvia",
+      "code3": "LVA",
+      "code": "LV",
+      "phone_code": "371",
+      "capital": "Riga",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 121,
+    "fields": {
+      "is_active": false,
+      "name": "Lebanon",
+      "code3": "LBN",
+      "code": "LB",
+      "phone_code": "961",
+      "capital": "Beirut",
+      "currency": "LBP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 122,
+    "fields": {
+      "is_active": false,
+      "name": "Lesotho",
+      "code3": "LSO",
+      "code": "LS",
+      "phone_code": "266",
+      "capital": "Maseru",
+      "currency": "LSL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 123,
+    "fields": {
+      "is_active": false,
+      "name": "Liberia",
+      "code3": "LBR",
+      "code": "LR",
+      "phone_code": "231",
+      "capital": "Monrovia",
+      "currency": "LRD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 124,
+    "fields": {
+      "is_active": false,
+      "name": "Libya",
+      "code3": "LBY",
+      "code": "LY",
+      "phone_code": "218",
+      "capital": "Tripolis",
+      "currency": "LYD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 125,
+    "fields": {
+      "is_active": false,
+      "name": "Liechtenstein",
+      "code3": "LIE",
+      "code": "LI",
+      "phone_code": "423",
+      "capital": "Vaduz",
+      "currency": "CHF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 126,
+    "fields": {
+      "is_active": false,
+      "name": "Lithuania",
+      "code3": "LTU",
+      "code": "LT",
+      "phone_code": "370",
+      "capital": "Vilnius",
+      "currency": "LTL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 127,
+    "fields": {
+      "is_active": false,
+      "name": "Luxembourg",
+      "code3": "LUX",
+      "code": "LU",
+      "phone_code": "352",
+      "capital": "Luxembourg",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 128,
+    "fields": {
+      "is_active": false,
+      "name": "Macau S.A.R.",
+      "code3": "MAC",
+      "code": "MO",
+      "phone_code": "853",
+      "capital": "Macao",
+      "currency": "MOP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 129,
+    "fields": {
+      "is_active": false,
+      "name": "Macedonia",
+      "code3": "MKD",
+      "code": "MK",
+      "phone_code": "389",
+      "capital": "Skopje",
+      "currency": "MKD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 130,
+    "fields": {
+      "is_active": false,
+      "name": "Madagascar",
+      "code3": "MDG",
+      "code": "MG",
+      "phone_code": "261",
+      "capital": "Antananarivo",
+      "currency": "MGA"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 131,
+    "fields": {
+      "is_active": false,
+      "name": "Malawi",
+      "code3": "MWI",
+      "code": "MW",
+      "phone_code": "265",
+      "capital": "Lilongwe",
+      "currency": "MWK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 132,
+    "fields": {
+      "is_active": false,
+      "name": "Malaysia",
+      "code3": "MYS",
+      "code": "MY",
+      "phone_code": "60",
+      "capital": "Kuala Lumpur",
+      "currency": "MYR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 133,
+    "fields": {
+      "is_active": false,
+      "name": "Maldives",
+      "code3": "MDV",
+      "code": "MV",
+      "phone_code": "960",
+      "capital": "Male",
+      "currency": "MVR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 134,
+    "fields": {
+      "is_active": false,
+      "name": "Mali",
+      "code3": "MLI",
+      "code": "ML",
+      "phone_code": "223",
+      "capital": "Bamako",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 135,
+    "fields": {
+      "is_active": false,
+      "name": "Malta",
+      "code3": "MLT",
+      "code": "MT",
+      "phone_code": "356",
+      "capital": "Valletta",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 136,
+    "fields": {
+      "is_active": false,
+      "name": "Man (Isle of)",
+      "code3": "IMN",
+      "code": "IM",
+      "phone_code": "+44-1624",
+      "capital": "Douglas, Isle of Man",
+      "currency": "GBP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 137,
+    "fields": {
+      "is_active": false,
+      "name": "Marshall Islands",
+      "code3": "MHL",
+      "code": "MH",
+      "phone_code": "692",
+      "capital": "Majuro",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 138,
+    "fields": {
+      "is_active": false,
+      "name": "Martinique",
+      "code3": "MTQ",
+      "code": "MQ",
+      "phone_code": "596",
+      "capital": "Fort-de-France",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 139,
+    "fields": {
+      "is_active": false,
+      "name": "Mauritania",
+      "code3": "MRT",
+      "code": "MR",
+      "phone_code": "222",
+      "capital": "Nouakchott",
+      "currency": "MRO"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 140,
+    "fields": {
+      "is_active": false,
+      "name": "Mauritius",
+      "code3": "MUS",
+      "code": "MU",
+      "phone_code": "230",
+      "capital": "Port Louis",
+      "currency": "MUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 141,
+    "fields": {
+      "is_active": false,
+      "name": "Mayotte",
+      "code3": "MYT",
+      "code": "YT",
+      "phone_code": "262",
+      "capital": "Mamoudzou",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 142,
+    "fields": {
+      "is_active": true,
+      "name": "Mexico",
+      "code3": "MEX",
+      "code": "MX",
+      "phone_code": "52",
+      "capital": "Mexico City",
+      "currency": "MXN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 143,
+    "fields": {
+      "is_active": false,
+      "name": "Micronesia",
+      "code3": "FSM",
+      "code": "FM",
+      "phone_code": "691",
+      "capital": "Palikir",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 144,
+    "fields": {
+      "is_active": false,
+      "name": "Moldova",
+      "code3": "MDA",
+      "code": "MD",
+      "phone_code": "373",
+      "capital": "Chisinau",
+      "currency": "MDL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 145,
+    "fields": {
+      "is_active": false,
+      "name": "Monaco",
+      "code3": "MCO",
+      "code": "MC",
+      "phone_code": "377",
+      "capital": "Monaco",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 146,
+    "fields": {
+      "is_active": false,
+      "name": "Mongolia",
+      "code3": "MNG",
+      "code": "MN",
+      "phone_code": "976",
+      "capital": "Ulan Bator",
+      "currency": "MNT"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 147,
+    "fields": {
+      "is_active": false,
+      "name": "Montenegro",
+      "code3": "MNE",
+      "code": "ME",
+      "phone_code": "382",
+      "capital": "Podgorica",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 148,
+    "fields": {
+      "is_active": false,
+      "name": "Montserrat",
+      "code3": "MSR",
+      "code": "MS",
+      "phone_code": "+1-664",
+      "capital": "Plymouth",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 149,
+    "fields": {
+      "is_active": false,
+      "name": "Morocco",
+      "code3": "MAR",
+      "code": "MA",
+      "phone_code": "212",
+      "capital": "Rabat",
+      "currency": "MAD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 150,
+    "fields": {
+      "is_active": false,
+      "name": "Mozambique",
+      "code3": "MOZ",
+      "code": "MZ",
+      "phone_code": "258",
+      "capital": "Maputo",
+      "currency": "MZN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 151,
+    "fields": {
+      "is_active": false,
+      "name": "Myanmar",
+      "code3": "MMR",
+      "code": "MM",
+      "phone_code": "95",
+      "capital": "Nay Pyi Taw",
+      "currency": "MMK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 152,
+    "fields": {
+      "is_active": false,
+      "name": "Namibia",
+      "code3": "NAM",
+      "code": "NA",
+      "phone_code": "264",
+      "capital": "Windhoek",
+      "currency": "NAD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 153,
+    "fields": {
+      "is_active": false,
+      "name": "Nauru",
+      "code3": "NRU",
+      "code": "NR",
+      "phone_code": "674",
+      "capital": "Yaren",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 154,
+    "fields": {
+      "is_active": false,
+      "name": "Nepal",
+      "code3": "NPL",
+      "code": "NP",
+      "phone_code": "977",
+      "capital": "Kathmandu",
+      "currency": "NPR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 155,
+    "fields": {
+      "is_active": false,
+      "name": "Netherlands Antilles",
+      "code3": "ANT",
+      "code": "AN",
+      "phone_code": "",
+      "capital": "",
+      "currency": ""
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 156,
+    "fields": {
+      "is_active": false,
+      "name": "Netherlands The",
+      "code3": "NLD",
+      "code": "NL",
+      "phone_code": "31",
+      "capital": "Amsterdam",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 157,
+    "fields": {
+      "is_active": false,
+      "name": "New Caledonia",
+      "code3": "NCL",
+      "code": "NC",
+      "phone_code": "687",
+      "capital": "Noumea",
+      "currency": "XPF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 158,
+    "fields": {
+      "is_active": false,
+      "name": "New Zealand",
+      "code3": "NZL",
+      "code": "NZ",
+      "phone_code": "64",
+      "capital": "Wellington",
+      "currency": "NZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 159,
+    "fields": {
+      "is_active": true,
+      "name": "Nicaragua",
+      "code3": "NIC",
+      "code": "NI",
+      "phone_code": "505",
+      "capital": "Managua",
+      "currency": "NIO"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 160,
+    "fields": {
+      "is_active": false,
+      "name": "Niger",
+      "code3": "NER",
+      "code": "NE",
+      "phone_code": "227",
+      "capital": "Niamey",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 161,
+    "fields": {
+      "is_active": true,
+      "name": "Nigeria",
+      "code3": "NGA",
+      "code": "NG",
+      "phone_code": "234",
+      "capital": "Abuja",
+      "currency": "NGN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 162,
+    "fields": {
+      "is_active": false,
+      "name": "Niue",
+      "code3": "NIU",
+      "code": "NU",
+      "phone_code": "683",
+      "capital": "Alofi",
+      "currency": "NZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 163,
+    "fields": {
+      "is_active": false,
+      "name": "Norfolk Island",
+      "code3": "NFK",
+      "code": "NF",
+      "phone_code": "672",
+      "capital": "Kingston",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 164,
+    "fields": {
+      "is_active": false,
+      "name": "Northern Mariana Islands",
+      "code3": "MNP",
+      "code": "MP",
+      "phone_code": "+1-670",
+      "capital": "Saipan",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 165,
+    "fields": {
+      "is_active": false,
+      "name": "Norway",
+      "code3": "NOR",
+      "code": "NO",
+      "phone_code": "47",
+      "capital": "Oslo",
+      "currency": "NOK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 166,
+    "fields": {
+      "is_active": false,
+      "name": "Oman",
+      "code3": "OMN",
+      "code": "OM",
+      "phone_code": "968",
+      "capital": "Muscat",
+      "currency": "OMR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 167,
+    "fields": {
+      "is_active": false,
+      "name": "Pakistan",
+      "code3": "PAK",
+      "code": "PK",
+      "phone_code": "92",
+      "capital": "Islamabad",
+      "currency": "PKR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 168,
+    "fields": {
+      "is_active": false,
+      "name": "Palau",
+      "code3": "PLW",
+      "code": "PW",
+      "phone_code": "680",
+      "capital": "Melekeok",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 169,
+    "fields": {
+      "is_active": false,
+      "name": "Palestinian Territory Occupied",
+      "code3": "PSE",
+      "code": "PS",
+      "phone_code": "970",
+      "capital": "East Jerusalem",
+      "currency": "ILS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 170,
+    "fields": {
+      "is_active": true,
+      "name": "Panama",
+      "code3": "PAN",
+      "code": "PA",
+      "phone_code": "507",
+      "capital": "Panama City",
+      "currency": "PAB"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 171,
+    "fields": {
+      "is_active": false,
+      "name": "Papua new Guinea",
+      "code3": "PNG",
+      "code": "PG",
+      "phone_code": "675",
+      "capital": "Port Moresby",
+      "currency": "PGK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 172,
+    "fields": {
+      "is_active": true,
+      "name": "Paraguay",
+      "code3": "PRY",
+      "code": "PY",
+      "phone_code": "595",
+      "capital": "Asuncion",
+      "currency": "PYG"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 173,
+    "fields": {
+      "is_active": true,
+      "name": "Peru",
+      "code3": "PER",
+      "code": "PE",
+      "phone_code": "51",
+      "capital": "Lima",
+      "currency": "PEN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 174,
+    "fields": {
+      "is_active": false,
+      "name": "Philippines",
+      "code3": "PHL",
+      "code": "PH",
+      "phone_code": "63",
+      "capital": "Manila",
+      "currency": "PHP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 175,
+    "fields": {
+      "is_active": false,
+      "name": "Pitcairn Island",
+      "code3": "PCN",
+      "code": "PN",
+      "phone_code": "870",
+      "capital": "Adamstown",
+      "currency": "NZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 176,
+    "fields": {
+      "is_active": false,
+      "name": "Poland",
+      "code3": "POL",
+      "code": "PL",
+      "phone_code": "48",
+      "capital": "Warsaw",
+      "currency": "PLN"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 177,
+    "fields": {
+      "is_active": false,
+      "name": "Portugal",
+      "code3": "PRT",
+      "code": "PT",
+      "phone_code": "351",
+      "capital": "Lisbon",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 178,
+    "fields": {
+      "is_active": true,
+      "name": "Puerto Rico",
+      "code3": "PRI",
+      "code": "PR",
+      "phone_code": "+1-787 and 1-939",
+      "capital": "San Juan",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 179,
+    "fields": {
+      "is_active": false,
+      "name": "Qatar",
+      "code3": "QAT",
+      "code": "QA",
+      "phone_code": "974",
+      "capital": "Doha",
+      "currency": "QAR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 180,
+    "fields": {
+      "is_active": false,
+      "name": "Reunion",
+      "code3": "REU",
+      "code": "RE",
+      "phone_code": "262",
+      "capital": "Saint-Denis",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 181,
+    "fields": {
+      "is_active": false,
+      "name": "Romania",
+      "code3": "ROU",
+      "code": "RO",
+      "phone_code": "40",
+      "capital": "Bucharest",
+      "currency": "RON"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 182,
+    "fields": {
+      "is_active": false,
+      "name": "Russia",
+      "code3": "RUS",
+      "code": "RU",
+      "phone_code": "7",
+      "capital": "Moscow",
+      "currency": "RUB"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 183,
+    "fields": {
+      "is_active": false,
+      "name": "Rwanda",
+      "code3": "RWA",
+      "code": "RW",
+      "phone_code": "250",
+      "capital": "Kigali",
+      "currency": "RWF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 184,
+    "fields": {
+      "is_active": false,
+      "name": "Saint Helena",
+      "code3": "SHN",
+      "code": "SH",
+      "phone_code": "290",
+      "capital": "Jamestown",
+      "currency": "SHP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 185,
+    "fields": {
+      "is_active": false,
+      "name": "Saint Kitts And Nevis",
+      "code3": "KNA",
+      "code": "KN",
+      "phone_code": "+1-869",
+      "capital": "Basseterre",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 186,
+    "fields": {
+      "is_active": false,
+      "name": "Saint Lucia",
+      "code3": "LCA",
+      "code": "LC",
+      "phone_code": "+1-758",
+      "capital": "Castries",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 187,
+    "fields": {
+      "is_active": false,
+      "name": "Saint Pierre and Miquelon",
+      "code3": "SPM",
+      "code": "PM",
+      "phone_code": "508",
+      "capital": "Saint-Pierre",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 188,
+    "fields": {
+      "is_active": false,
+      "name": "Saint Vincent And The Grenadines",
+      "code3": "VCT",
+      "code": "VC",
+      "phone_code": "+1-784",
+      "capital": "Kingstown",
+      "currency": "XCD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 189,
+    "fields": {
+      "is_active": false,
+      "name": "Saint-Barthelemy",
+      "code3": "BLM",
+      "code": "BL",
+      "phone_code": "590",
+      "capital": "Gustavia",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 190,
+    "fields": {
+      "is_active": false,
+      "name": "Saint-Martin (French part)",
+      "code3": "MAF",
+      "code": "MF",
+      "phone_code": "590",
+      "capital": "Marigot",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 191,
+    "fields": {
+      "is_active": false,
+      "name": "Samoa",
+      "code3": "WSM",
+      "code": "WS",
+      "phone_code": "685",
+      "capital": "Apia",
+      "currency": "WST"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 192,
+    "fields": {
+      "is_active": false,
+      "name": "San Marino",
+      "code3": "SMR",
+      "code": "SM",
+      "phone_code": "378",
+      "capital": "San Marino",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 193,
+    "fields": {
+      "is_active": false,
+      "name": "Sao Tome and Principe",
+      "code3": "STP",
+      "code": "ST",
+      "phone_code": "239",
+      "capital": "Sao Tome",
+      "currency": "STD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 194,
+    "fields": {
+      "is_active": false,
+      "name": "Saudi Arabia",
+      "code3": "SAU",
+      "code": "SA",
+      "phone_code": "966",
+      "capital": "Riyadh",
+      "currency": "SAR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 195,
+    "fields": {
+      "is_active": false,
+      "name": "Senegal",
+      "code3": "SEN",
+      "code": "SN",
+      "phone_code": "221",
+      "capital": "Dakar",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 196,
+    "fields": {
+      "is_active": false,
+      "name": "Serbia",
+      "code3": "SRB",
+      "code": "RS",
+      "phone_code": "381",
+      "capital": "Belgrade",
+      "currency": "RSD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 197,
+    "fields": {
+      "is_active": false,
+      "name": "Seychelles",
+      "code3": "SYC",
+      "code": "SC",
+      "phone_code": "248",
+      "capital": "Victoria",
+      "currency": "SCR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 198,
+    "fields": {
+      "is_active": false,
+      "name": "Sierra Leone",
+      "code3": "SLE",
+      "code": "SL",
+      "phone_code": "232",
+      "capital": "Freetown",
+      "currency": "SLL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 199,
+    "fields": {
+      "is_active": false,
+      "name": "Singapore",
+      "code3": "SGP",
+      "code": "SG",
+      "phone_code": "65",
+      "capital": "Singapur",
+      "currency": "SGD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 200,
+    "fields": {
+      "is_active": false,
+      "name": "Slovakia",
+      "code3": "SVK",
+      "code": "SK",
+      "phone_code": "421",
+      "capital": "Bratislava",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 201,
+    "fields": {
+      "is_active": false,
+      "name": "Slovenia",
+      "code3": "SVN",
+      "code": "SI",
+      "phone_code": "386",
+      "capital": "Ljubljana",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 202,
+    "fields": {
+      "is_active": false,
+      "name": "Solomon Islands",
+      "code3": "SLB",
+      "code": "SB",
+      "phone_code": "677",
+      "capital": "Honiara",
+      "currency": "SBD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 203,
+    "fields": {
+      "is_active": false,
+      "name": "Somalia",
+      "code3": "SOM",
+      "code": "SO",
+      "phone_code": "252",
+      "capital": "Mogadishu",
+      "currency": "SOS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 204,
+    "fields": {
+      "is_active": false,
+      "name": "South Africa",
+      "code3": "ZAF",
+      "code": "ZA",
+      "phone_code": "27",
+      "capital": "Pretoria",
+      "currency": "ZAR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 205,
+    "fields": {
+      "is_active": false,
+      "name": "South Georgia",
+      "code3": "SGS",
+      "code": "GS",
+      "phone_code": "",
+      "capital": "Grytviken",
+      "currency": "GBP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 206,
+    "fields": {
+      "is_active": false,
+      "name": "South Sudan",
+      "code3": "SSD",
+      "code": "SS",
+      "phone_code": "211",
+      "capital": "Juba",
+      "currency": "SSP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 207,
+    "fields": {
+      "is_active": true,
+      "name": "Spain",
+      "code3": "ESP",
+      "code": "ES",
+      "phone_code": "34",
+      "capital": "Madrid",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 208,
+    "fields": {
+      "is_active": false,
+      "name": "Sri Lanka",
+      "code3": "LKA",
+      "code": "LK",
+      "phone_code": "94",
+      "capital": "Colombo",
+      "currency": "LKR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 209,
+    "fields": {
+      "is_active": false,
+      "name": "Sudan",
+      "code3": "SDN",
+      "code": "SD",
+      "phone_code": "249",
+      "capital": "Khartoum",
+      "currency": "SDG"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 210,
+    "fields": {
+      "is_active": false,
+      "name": "Suriname",
+      "code3": "SUR",
+      "code": "SR",
+      "phone_code": "597",
+      "capital": "Paramaribo",
+      "currency": "SRD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 211,
+    "fields": {
+      "is_active": false,
+      "name": "Svalbard And Jan Mayen Islands",
+      "code3": "SJM",
+      "code": "SJ",
+      "phone_code": "47",
+      "capital": "Longyearbyen",
+      "currency": "NOK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 212,
+    "fields": {
+      "is_active": false,
+      "name": "Swaziland",
+      "code3": "SWZ",
+      "code": "SZ",
+      "phone_code": "268",
+      "capital": "Mbabane",
+      "currency": "SZL"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 213,
+    "fields": {
+      "is_active": false,
+      "name": "Sweden",
+      "code3": "SWE",
+      "code": "SE",
+      "phone_code": "46",
+      "capital": "Stockholm",
+      "currency": "SEK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 214,
+    "fields": {
+      "is_active": false,
+      "name": "Switzerland",
+      "code3": "CHE",
+      "code": "CH",
+      "phone_code": "41",
+      "capital": "Berne",
+      "currency": "CHF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 215,
+    "fields": {
+      "is_active": false,
+      "name": "Syria",
+      "code3": "SYR",
+      "code": "SY",
+      "phone_code": "963",
+      "capital": "Damascus",
+      "currency": "SYP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 216,
+    "fields": {
+      "is_active": false,
+      "name": "Taiwan",
+      "code3": "TWN",
+      "code": "TW",
+      "phone_code": "886",
+      "capital": "Taipei",
+      "currency": "TWD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 217,
+    "fields": {
+      "is_active": false,
+      "name": "Tajikistan",
+      "code3": "TJK",
+      "code": "TJ",
+      "phone_code": "992",
+      "capital": "Dushanbe",
+      "currency": "TJS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 218,
+    "fields": {
+      "is_active": false,
+      "name": "Tanzania",
+      "code3": "TZA",
+      "code": "TZ",
+      "phone_code": "255",
+      "capital": "Dodoma",
+      "currency": "TZS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 219,
+    "fields": {
+      "is_active": false,
+      "name": "Thailand",
+      "code3": "THA",
+      "code": "TH",
+      "phone_code": "66",
+      "capital": "Bangkok",
+      "currency": "THB"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 220,
+    "fields": {
+      "is_active": false,
+      "name": "Togo",
+      "code3": "TGO",
+      "code": "TG",
+      "phone_code": "228",
+      "capital": "Lome",
+      "currency": "XOF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 221,
+    "fields": {
+      "is_active": false,
+      "name": "Tokelau",
+      "code3": "TKL",
+      "code": "TK",
+      "phone_code": "690",
+      "capital": "",
+      "currency": "NZD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 222,
+    "fields": {
+      "is_active": false,
+      "name": "Tonga",
+      "code3": "TON",
+      "code": "TO",
+      "phone_code": "676",
+      "capital": "Nuku'alofa",
+      "currency": "TOP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 223,
+    "fields": {
+      "is_active": false,
+      "name": "Trinidad And Tobago",
+      "code3": "TTO",
+      "code": "TT",
+      "phone_code": "+1-868",
+      "capital": "Port of Spain",
+      "currency": "TTD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 224,
+    "fields": {
+      "is_active": false,
+      "name": "Tunisia",
+      "code3": "TUN",
+      "code": "TN",
+      "phone_code": "216",
+      "capital": "Tunis",
+      "currency": "TND"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 225,
+    "fields": {
+      "is_active": false,
+      "name": "Turkey",
+      "code3": "TUR",
+      "code": "TR",
+      "phone_code": "90",
+      "capital": "Ankara",
+      "currency": "TRY"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 226,
+    "fields": {
+      "is_active": false,
+      "name": "Turkmenistan",
+      "code3": "TKM",
+      "code": "TM",
+      "phone_code": "993",
+      "capital": "Ashgabat",
+      "currency": "TMT"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 227,
+    "fields": {
+      "is_active": false,
+      "name": "Turks And Caicos Islands",
+      "code3": "TCA",
+      "code": "TC",
+      "phone_code": "+1-649",
+      "capital": "Cockburn Town",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 228,
+    "fields": {
+      "is_active": false,
+      "name": "Tuvalu",
+      "code3": "TUV",
+      "code": "TV",
+      "phone_code": "688",
+      "capital": "Funafuti",
+      "currency": "AUD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 229,
+    "fields": {
+      "is_active": false,
+      "name": "Uganda",
+      "code3": "UGA",
+      "code": "UG",
+      "phone_code": "256",
+      "capital": "Kampala",
+      "currency": "UGX"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 230,
+    "fields": {
+      "is_active": false,
+      "name": "Ukraine",
+      "code3": "UKR",
+      "code": "UA",
+      "phone_code": "380",
+      "capital": "Kiev",
+      "currency": "UAH"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 231,
+    "fields": {
+      "is_active": false,
+      "name": "United Arab Emirates",
+      "code3": "ARE",
+      "code": "AE",
+      "phone_code": "971",
+      "capital": "Abu Dhabi",
+      "currency": "AED"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 232,
+    "fields": {
+      "is_active": false,
+      "name": "United Kingdom",
+      "code3": "GBR",
+      "code": "GB",
+      "phone_code": "44",
+      "capital": "London",
+      "currency": "GBP"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 233,
+    "fields": {
+      "is_active": true,
+      "name": "United States",
+      "code3": "USA",
+      "code": "US",
+      "phone_code": "1",
+      "capital": "Washington",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 234,
+    "fields": {
+      "is_active": false,
+      "name": "United States Minor Outlying Islands",
+      "code3": "UMI",
+      "code": "UM",
+      "phone_code": "1",
+      "capital": "",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 235,
+    "fields": {
+      "is_active": true,
+      "name": "Uruguay",
+      "code3": "URY",
+      "code": "UY",
+      "phone_code": "598",
+      "capital": "Montevideo",
+      "currency": "UYU"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 236,
+    "fields": {
+      "is_active": false,
+      "name": "Uzbekistan",
+      "code3": "UZB",
+      "code": "UZ",
+      "phone_code": "998",
+      "capital": "Tashkent",
+      "currency": "UZS"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 237,
+    "fields": {
+      "is_active": false,
+      "name": "Vanuatu",
+      "code3": "VUT",
+      "code": "VU",
+      "phone_code": "678",
+      "capital": "Port Vila",
+      "currency": "VUV"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 238,
+    "fields": {
+      "is_active": false,
+      "name": "Vatican City State (Holy See)",
+      "code3": "VAT",
+      "code": "VA",
+      "phone_code": "379",
+      "capital": "Vatican City",
+      "currency": "EUR"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 239,
+    "fields": {
+      "is_active": true,
+      "name": "Venezuela",
+      "code3": "VEN",
+      "code": "VE",
+      "phone_code": "58",
+      "capital": "Caracas",
+      "currency": "VEF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 240,
+    "fields": {
+      "is_active": false,
+      "name": "Vietnam",
+      "code3": "VNM",
+      "code": "VN",
+      "phone_code": "84",
+      "capital": "Hanoi",
+      "currency": "VND"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 241,
+    "fields": {
+      "is_active": false,
+      "name": "Virgin Islands (British)",
+      "code3": "VGB",
+      "code": "VG",
+      "phone_code": "+1-284",
+      "capital": "Road Town",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 242,
+    "fields": {
+      "is_active": false,
+      "name": "Virgin Islands (US)",
+      "code3": "VIR",
+      "code": "VI",
+      "phone_code": "+1-340",
+      "capital": "Charlotte Amalie",
+      "currency": "USD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 243,
+    "fields": {
+      "is_active": false,
+      "name": "Wallis And Futuna Islands",
+      "code3": "WLF",
+      "code": "WF",
+      "phone_code": "681",
+      "capital": "Mata Utu",
+      "currency": "XPF"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 244,
+    "fields": {
+      "is_active": false,
+      "name": "Western Sahara",
+      "code3": "ESH",
+      "code": "EH",
+      "phone_code": "212",
+      "capital": "El-Aaiun",
+      "currency": "MAD"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 245,
+    "fields": {
+      "is_active": false,
+      "name": "Yemen",
+      "code3": "YEM",
+      "code": "YE",
+      "phone_code": "967",
+      "capital": "Sanaa",
+      "currency": "YER"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 246,
+    "fields": {
+      "is_active": false,
+      "name": "Zambia",
+      "code3": "ZMB",
+      "code": "ZM",
+      "phone_code": "260",
+      "capital": "Lusaka",
+      "currency": "ZMK"
+    }
+  },
+  {
+    "model": "addresses.country",
+    "pk": 247,
+    "fields": {
+      "is_active": false,
+      "name": "Zimbabwe",
+      "code3": "ZWE",
+      "code": "ZW",
+      "phone_code": "263",
+      "capital": "Harare",
+      "currency": "ZWL"
+    }
+  }
+]

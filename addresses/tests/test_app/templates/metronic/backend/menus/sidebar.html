@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n addresses_tags %}
 
 <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
 
@@ -10,7 +10,7 @@
 
     {# START INCLUDE APP MENU ITEMS HERE #}
 
-        {% comment %}{% include "addresses/menus/sidebar_left.html" %}{% endcomment %}
+        {% render_addresses_menu %}
 
     {# END INCLUDE APP MENU ITEMS HERE #}
 

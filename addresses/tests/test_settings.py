@@ -52,6 +52,7 @@ EXTERNAL_APPS = [
     'sekizai',
     'compressor',
     'rest_framework',
+    'rest_auth',
     'coreapi',
 ]
 
@@ -84,7 +85,7 @@ REST_FRAMEWORK = {
         "rest_framework.renderers.JSONRenderer",
         "rest_framework.renderers.BrowsableAPIRenderer",
     ),
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_PERMISSION_CLASSES": ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.TokenAuthentication",
@@ -93,3 +94,6 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
     "DATE_INPUT_FORMATS": ['%m/%y', '%m/%Y', '%Y-%m-%d'],
 }
+
+LOGIN_URL = 'admin:login'
+LOGIN_REDIRECT_URL = "/"

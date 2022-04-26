@@ -1,0 +1,90 @@
+{% extends 'forms.html' %}
+{% load i18n sekizai_tags compress %}
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block form_body %}
+    {% include 'metronic/backend/form_snippets/form_fields.html' with form=form %}
+
+
+{% addtoblock "page_js" %}
+{% compress js file regions_form %}
+<script>
+// Define form element
+const form = document.getElementById('formSubmit');
+// Submit button handler
+const submitButton = document.getElementById('btn_form_submit');
+// Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+var validator = FormValidation.formValidation(
+    form,
+    {
+        fields: {
+            'name': {
+                validators: {
+                    notEmpty: {
+                        message: gettext('This field is required')
+                    }
+                }
+            },
+        },
+
+        plugins: {
+            trigger: new FormValidation.plugins.Trigger(),
+            bootstrap: new FormValidation.plugins.Bootstrap5({
+                rowSelector: '.fv-row',
+                eleInvalidClass: '',
+                eleValidClass: ''
+            }),
+            icon: new FormValidation.plugins.Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+        }
+    }
+);
+
+{% comment %}// Revalidate Select2 input. For more info, plase visit the official plugin site: https://select2.org/
+$(form.querySelector('[name="countries"]')).on('change', function () {
+    // Revalidate the field when an option is chosen
+    validator.revalidateField('countries');
+});{% endcomment %}
+
+submitButton.addEventListener('click', function (e) {
+    // Prevent default button action
+    e.preventDefault();
+    // Validate form before submit
+    if (validator) {
+        validator.validate().then(function (status) {
+
+            if (status === 'Valid') {
+                blockUI.block();
+                // Show loading indication
+                submitButton.setAttribute('data-kt-indicator', 'on');
+
+                // Disable button to avoid multiple click
+                submitButton.disabled = true;
+
+                // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
+                setTimeout(function () {
+                    // Remove loading indication
+                    submitButton.removeAttribute('data-kt-indicator');
+
+                    // Enable button
+                    submitButton.disabled = false;
+
+                    form.submit(); // Submit form
+
+                    blockUI.release();
+                }, 2000);
+            }
+        });
+    }
+});
+
+</script>
+{% endcompress %}
+{% endaddtoblock %}
+
+{% endblock %}
+
