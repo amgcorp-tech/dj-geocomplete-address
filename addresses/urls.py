@@ -39,5 +39,4 @@ urlpatterns = [
     path("address/<pk>/edit", views.AddressUpdateView.as_view(), name="address_edit"),
     path("address/bulk/remove/", views.BulkDeleteAddressView.as_view(), name="address_delete_bulk"),
 
-    path('martor/', include('martor.urls')),
 ]

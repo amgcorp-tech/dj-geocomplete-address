@@ -14,8 +14,6 @@ django-widget-tweaks==1.4.12
 
 coreapi==2.3.3
 
-martor==1.6.13
-
 python-decouple==3.6
 Pillow==9.1.0
 
