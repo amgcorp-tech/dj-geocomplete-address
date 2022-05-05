@@ -8,7 +8,7 @@ Installation
 
 To get the latest stable release from PyPi
 
-    pip install dj-addresses
+    pip install dj-geocomplete-addresses
 
 To get the latest commit from GitHub
 

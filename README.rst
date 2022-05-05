@@ -10,7 +10,7 @@ To get the latest stable release from PyPi
 
 .. code-block:: bash
 
-    pip install dj-addresses
+    pip install dj-geocomplete-addresses
 
 To get the latest commit from GitHub
 

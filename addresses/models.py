@@ -6,14 +6,11 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from martor.models import MartorField
 from model_utils.models import TimeStampedModel
 from simple_history.models import HistoricalRecords
 
 
-from addresses.apps import AddressesConfig
 from addresses.managers import AvailableCountries, AvailableStates, AvailableRegions
-from addresses.utils.utils import load_version
 
 User = get_user_model()
 
