@@ -26,7 +26,7 @@
             {% endif %}
             {% if perms.addresses.view_country %}
             <li class="nav-item col-12 col-lg mb-5 mb-lg-0 mt-2">
-                <a class="nav-link btn btn-flex btn-color-gray-400 btn-outline btn-outline-default btn-active-primary d-flex flex-grow-1 flex-column flex-center py-5 h-1250px h-lg-175px active" href="{% url 'address_manage' %}">
+                <a class="nav-link btn btn-flex btn-color-gray-400 btn-outline btn-outline-default btn-active-primary d-flex flex-grow-1 flex-column flex-center py-5 h-1250px h-lg-175px active" href="{% url 'countries_manage' %}">
                     <span class="svg-icon svg-icon-3hx mb-5 mx-0 my-5">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -60,7 +60,7 @@
                 </a>
             </li>
             {% endif %}
-            <li class="nav-item col-12 col-lg mb-5 mb-lg-0 mt-2">
+            {% comment %}<li class="nav-item col-12 col-lg mb-5 mb-lg-0 mt-2">
                 <a class="nav-link btn btn-flex btn-color-gray-400 btn-outline btn-outline-default btn-active-dark d-flex flex-grow-1 flex-column flex-center py-5 h-1250px h-lg-175px active" href="/api/docs/">
                     <span class="svg-icon svg-icon-3hx mb-5 mx-0 my-5">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -75,7 +75,7 @@
                         {% trans "API Docs" %}
                     </span>
                 </a>
-            </li>
+            </li>{% endcomment %}
 
         </ul>
     </div>
