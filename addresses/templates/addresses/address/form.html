@@ -7,8 +7,10 @@
 {% block form_body %}
 {% include 'metronic/backend/form_snippets/form_fields.html' with form=form %}
 
+
 {% addtoblock "page_js" %}
-{{ form.media }}
+{{ form.media.js }}
+
 {% compress js file address_form %}
 <script>
 // Define form element

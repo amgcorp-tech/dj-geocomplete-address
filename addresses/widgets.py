@@ -1,10 +1,8 @@
-import django
 from django import forms
-from django.conf import settings
 from django.utils.html import escape
 from django.utils.safestring import mark_safe
 
-from .app_settings import discover_addresses_settings, JQUERY_URL, USE_DJANGO_JQUERY
+from .app_settings import discover_addresses_settings
 from .models import Address
 
 
@@ -37,22 +35,6 @@ class AddressWidget(forms.TextInput):
             "addresses/js/geocomplete/jquery.geocomplete.min.js",
             "addresses/address/js/address.js",
         ]
-
-        if JQUERY_URL:
-            js.insert(0, JQUERY_URL)
-        elif JQUERY_URL is not False:
-            vendor = "" if django.VERSION < (1, 9, 0) else "vendor/jquery/"
-            extra = "" if settings.DEBUG else ".min"
-
-            jquery_paths = [
-                "{}jquery{}.js".format(vendor, extra),
-                "jquery.init.js",
-            ]
-
-            if USE_DJANGO_JQUERY:
-                jquery_paths = ["admin/js/{}".format(path) for path in jquery_paths]
-
-            js.extend(jquery_paths)
 
     def __init__(self, *args, **kwargs):
         attrs = kwargs.get("attrs", {})
